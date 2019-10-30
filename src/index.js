@@ -5,7 +5,10 @@ import Header from './components/header';
 
 // Code-splitting is automated for routes
 import Home from './routes/home';
-import Profile from './routes/profile';
+import Why from './routes/why';
+import Work from './routes/work';
+import Blog from './routes/blog';
+import Contact from './routes/contact';
 
 import './index.css';
 
@@ -24,18 +27,20 @@ class App extends Component {
             <div id="app">
                 <Header />
                 <Router onChange={this.handleRoute}>
-                    <Home path="/" />
-                    <Profile path="/profile/" user="me" />
-                    <Profile path="/profile/:user" />
+                    {/* <Home path="/" />
+                    <Why path="/why" />
+                    <Work path="/work" />
+                    <Blog path="/blog" />
+                    <Contact path="/contact" /> */}
                 </Router>
+                <div id='background' />
             </div>
         );
     }
 }
-
 const rootElement = document.body;
 if (rootElement.hasChildNodes()) {
     render(<App />, rootElement, rootElement.firstElementChild);
 } else {
     render(<App />, rootElement);
-}
+} 

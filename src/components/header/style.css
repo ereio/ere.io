@@ -1,48 +1,76 @@
-.header {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 56px;
-	padding: 0;
-	background: #673AB7;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	z-index: 50;
-}
+.header {  
+	height: 100%;
+	flex: 1;
 
-.header h1 {
-	float: left;
-	margin: 0;
-	padding: 0 15px;
-	font-size: 24px;
-	line-height: 56px;
-	font-weight: 400;
-	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;  
+	z-index: 3;
 }
+ 
 
-.header nav {
-	float: right;
+.header nav { 
 	font-size: 100%;
+
+	margin-top: 2vh;
+	border: 0.5px solid #fff; 
+	border-radius: 5px;
 }
 
 .header nav a {
-	display: inline-block;
-	height: 56px;
-	line-height: 56px;
-	padding: 0 15px;
-	min-width: 50px;
-	text-align: center;
-	background: rgba(255,255,255,0);
-	text-decoration: none;
 	color: #FFF;
+
+	height: 6vw;
+	max-height: 48px;
+
+	display: inline-flex;
+	align-items: center;
+
+	padding: 0 4vw 0 4vw; 
+	text-align: center;
+
+	text-decoration: none;
+	border-color: #FFF;
+	border-right-width: 1px;
+	background: rgba(255,255,255,0);
 	will-change: background-color;
 }
 
 .header nav a:hover,
 .header nav a:active {
-	background: rgba(0,0,0,0.2);
+	border-radius: 5px;
+	background: rgba(255,255,255,0.15);
 }
 
 .header nav a.active {
-	background: rgba(0,0,0,0.4);
+	background: rgba(255,255,255,0.25);
+}
+ 
+.icon_container::after {
+	background:#fff;
+	content: "";
+	display: block;
+	height: calc(3.5rem + 1px);
+	left: calc(50% - 1px);
+	position: absolute;
+	top: calc(-3.5rem - 1px);
+	width: 1px;
+}
+
+.ereio_icon {
+	height: 25vw; 
+	max-width: 160px;
+	max-height: 160px;  
+}
+.ereio-icon-augmented { 
+	height: 12vmin;
+	--augmented-ui: tr-clip r-notch-y br-round bl-clip exe;
+	--aug-border: 20px;
+	--aug-border-bg: black;
+	--aug-tr: 40px;
+	--aug-bl: 60px;
+	--aug-br: 30px;
+	--aug-r-width: 20px;
+	--aug-r-height: 200px; 
 }

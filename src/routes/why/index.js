@@ -1,10 +1,10 @@
 import { h } from 'preact';
 import style from './style.css';
 
-const Home = () => (
+const Why = () => (
 	<div class={style.home}>
-		<h1>Home</h1>
-		<p>This is the Home component.</p>
+		<h1>Why</h1>
+		<p>Why</p>
 	</div>
 );
 
