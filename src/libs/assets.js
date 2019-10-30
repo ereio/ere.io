@@ -1,0 +1,1 @@
+export const EREIO_ICON = require('../assets/icons/ereio.png');

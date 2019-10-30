@@ -50,12 +50,8 @@
     ]
   },
   "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
     "source": "build",
-    "destination": "dist",
+    "destination": "build",
     "removeScriptTags": true
   }
 }
