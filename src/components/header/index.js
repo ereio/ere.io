@@ -6,14 +6,14 @@ import { EREIO_ICON } from '../../libs/assets';
 
 const Header = () => (
 	<header class={style.header}>
-		<div class={style.icon_container}>
-			<img src={EREIO_ICON} class={style.ereio_icon} alt="ereio" />
+		<div class={style.iconContainer}>
+			<img src={EREIO_ICON} class={style.ereioIcon} alt="ereio" />
 		</div>
-		<nav>
-			<Link activeClassName={style.active} href="/why">me</Link>
-			<Link activeClassName={style.active} href="/work">work</Link>
-			<Link activeClassName={style.active} href="/blog">blog</Link>
-			<Link activeClassName={style.active} href="/contact">contact</Link>
+		<nav class={style.navi}>
+			<Link activeClassName={style.testing} href="/why">me</Link>
+			<Link activeClassName={style.testing} href="/work">work</Link>
+			<Link activeClassName={style.testing} href="/blog">blog</Link>
+			<Link activeClassName={style.testing} href="/contact">contact</Link>
 		</nav>
 	</header>
 );

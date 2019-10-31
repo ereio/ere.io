@@ -8,21 +8,22 @@
 	align-items: center;  
 	z-index: 3;
 }
- 
 
-.header nav { 
-	font-size: 100%;
+.navi {  
 
-	margin-top: 2vh;
+	margin-top: 3vh;
 	border: 0.5px solid #fff; 
 	border-radius: 5px;
 }
 
 .header nav a {
-	color: #FFF;
-
 	height: 6vw;
-	max-height: 48px;
+	min-height: 15px;
+	max-height: 30px;
+
+	color: #FFF;
+	text-decoration: none;
+
 
 	display: inline-flex;
 	align-items: center;
@@ -30,39 +31,34 @@
 	padding: 0 4vw 0 4vw; 
 	text-align: center;
 
-	text-decoration: none;
-	border-color: #FFF;
-	border-right-width: 1px;
+	border-style: solid;
+	border-color: #FFF; 
+	border-width: 0;
+	border-right-width: 0.5px;
+	
 	background: rgba(255,255,255,0);
 	will-change: background-color;
 }
 
 .header nav a:hover,
-.header nav a:active {
-	border-radius: 5px;
+.header nav a:active { 
 	background: rgba(255,255,255,0.15);
 }
 
-.header nav a.active {
+.header nav a.testing {
 	background: rgba(255,255,255,0.25);
 }
- 
-.icon_container::after {
-	background:#fff;
-	content: "";
-	display: block;
-	height: calc(3.5rem + 1px);
-	left: calc(50% - 1px);
-	position: absolute;
-	top: calc(-3.5rem - 1px);
-	width: 1px;
+  
+.ereioIcon {
+	height: 25vw; 
+
+	min-width: 60px;
+	min-height: 75px;  
+
+	max-width: 100px;
+	max-height: 130px;  
 }
 
-.ereio_icon {
-	height: 25vw; 
-	max-width: 160px;
-	max-height: 160px;  
-}
 .ereio-icon-augmented { 
 	height: 12vmin;
 	--augmented-ui: tr-clip r-notch-y br-round bl-clip exe;
