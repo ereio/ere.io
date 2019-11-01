@@ -61,97 +61,110 @@
 	color: #000000; 
 }
 
+.hover_container {
+	position: relative;
+}
+
+.bottom_hover {
+	position: absolute;
+	width: 150px;
+	height: 150px; 
+	z-index: 100; 
+	opacity: 0; 
+}
+/* .top_hover {
+	position: absolute;
+	width: 150px;
+	height: 150px; 
+	z-index: 100; 
+	opacity: 0; 
+}
+.stem_hover {
+	position: absolute; 
+	width: 150px;
+	height: 150px; 
+	z-index: 100; 
+	opacity: 0; 
+}
+.spout_hover {
+	position: absolute;
+	width: 150px;
+	height: 150px; 
+	z-index: 100; 
+	opacity: 0; 
+}
+.topleft_hover {
+	position: absolute;
+	width: 150px;
+	height: 150px; 
+	z-index: 100; 
+	opacity: 0; 
+} */
+
 .icons {    
 	position: relative;
 	min-width: 159px;
-	min-height: 199px; 
-	pointer-events: none;
+	min-height: 199px;  
 } 
 
-.icons img {
-	opacity: 1;
+ 
+
+.bottom_hover {
+	position: absolute; 
+	bottom: 0;
+	left: 37px;
+	z-index: 100;
+	width: 84px;
+	height: 38.45px;
+	opacity: 0; 
 }
 
-.icons:hover img {
+.bottom_hover:hover ~ .icons .dot {
 	opacity: 0;   
     transition: opacity  0.01s ease-in;
     -moz-transition: opacity   0.01s ease-in;
     -webkit-transition: opacity 0.01s ease-in;
 }
 
-.icons img:hover, .icons img:hover ~ img {
+.bottom_hover:active ~ .icons .dot {
 	opacity: 1;   
     transition: opacity  0.01s ease-in;
     -moz-transition: opacity   0.01s ease-in;
     -webkit-transition: opacity 0.01s ease-in;
 }
 
-.topleft{
+.top_hover {
 	position: absolute; 
 	top: 0;
 	left: 0;
-
-	/* opacity: 1; */
-	z-index: 0;
-	pointer-events: auto;
-    transition: opacity 1s ease-out;
-    -moz-transition: opacity  1s ease-out;
-    -webkit-transition: opacity 1s ease-out;
+	z-index: 4;
+	height: 38.45px;
+	width: 111px;
+	opacity: 0; 
 }
 
-.bottom {
-	position: absolute;  
-	width: 84px;
-	bottom: 0;
-	left: 37px;
-
-	z-index: 3;
-	opacity: 1;
-	pointer-events: auto;
-    transition: opacity 1s ease-out;
-    -moz-transition: opacity  1s ease-out;
-    -webkit-transition: opacity 1s ease-out;
-}
-
-.spout {
+.left_hover {
 	position: absolute; 
-	top: 37px; 
-	left: 73px;
-
-	z-index: 2;
-	opacity: 1;
-	pointer-events: auto;
-    transition: opacity 1s ease-out;
-    -moz-transition: opacity  1s ease-out;
-    -webkit-transition: opacity 1s ease-out;
-}
-
-.dot { 
-	position: absolute;  
 	top: 0;
-	right: 0;
-	z-index: 1;
-	height: 38px;  
+	left: 0;
+	z-index: 4;
 	width: 38px; 
- 
-	opacity: 1;
-	pointer-events: auto;
-    transition: opacity 1s ease-out;
-    -moz-transition: opacity  1s ease-out;
-    -webkit-transition: opacity 1s ease-out;
-} 
+	height: 100%;
+	opacity: 0; 
+}
 
-.stem { 
-	position: absolute; 
-	bottom: 0;
-	right: 0;
- 
-	opacity: 1;
-	pointer-events: auto;
-    transition: opacity 0.75s ease-out;
-    -moz-transition: opacity  0.75s ease-out;
-    -webkit-transition: opacity 0.75s ease-out;
-} 
+.top_hover:hover ~ .icons .dot,
+.top_hover:hover ~ .icons .stem, 
+.top_hover:hover ~ .icons .bottom,
+.left_hover:hover ~ .icons .dot,
+.left_hover:hover ~ .icons .stem, 
+.left_hover:hover ~ .icons .bottom {
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}
+
 
 .dot:hover ~ .spout, .dot:hover ~ .bottom, .dot:hover ~ .topleft {
 	opacity: 0;   
@@ -173,6 +186,68 @@
     -moz-transition: opacity   0.01s ease-in;
     -webkit-transition: opacity 0.01s ease-in; 
 }
+
+.topleft{
+	position: absolute; 
+	z-index: 0;
+	top: 0;
+	left: 0;
+
+	/* opacity: 1; */ 
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.bottom {
+	position: absolute;  
+	z-index: 3;
+	width: 84px;
+	bottom: 0;
+	left: 37px;
+
+	opacity: 1;  
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.spout {
+	position: absolute; 
+	z-index: 2;
+	top: 37px; 
+	left: 73px;
+
+	opacity: 1; 
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.dot { 
+	position: absolute;  
+	top: 0;
+	right: 0;
+	z-index: 1;
+	height: 38px;  
+	width: 38px; 
+ 
+	opacity: 1; 
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+} 
+
+.stem { 
+	position: absolute; 
+	bottom: 0;
+	right: 0;
+ 
+	opacity: 1; 
+    transition: opacity 0.75s ease-out;
+    -moz-transition: opacity  0.75s ease-out;
+    -webkit-transition: opacity 0.75s ease-out;
+} 
 
 
 /* .topleft:hover ~ .bottom, .topleft:hover ~ .stem {

@@ -20,18 +20,18 @@ const Ereio = (props) => (
 
 const Header = () => (
 	<header class={style.header}>
-		<div>
-
+		<div class={style.hover_container}>
+			{/* Could be used to be consistant with hot quadrants */}
+			{/* <div class={style.top_hover} />
+			<div class={style.stem_hover} />
+			<div class={style.spout_hover} /> */}
+			<div class={style.bottom_hover} />
+			<div class={style.top_hover} />
+			<div class={style.left_hover} />
 			<div class={style.icons}>
-				{/* <Ereio fill="black" /> */}
-				{/* <img src={E_ICON} class={style.e} alt="e" />
-			<img src={R_ICON} class={style.r} alt="r" />
-			<img src={E_ICON} class={style.e} alt="e" />
-			<img src={I_ICON} class={style.i} alt="i" />
-			<img src={O_ICON} class={style.o} alt="o" /> */}
 				<img src={DOT} class={style.dot} />
-				<img src={BOTTOM} class={style.bottom} />
 				<img src={STEM} class={style.stem} />
+				<img src={BOTTOM} class={style.bottom} />
 				<img src={TOP_LEFT} class={style.topleft} />
 				<img src={SPOUT} class={style.spout} />
 			</div>
