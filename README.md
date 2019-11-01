@@ -1,3 +1,3 @@
 # ere.io
 
-## the website
+## my website

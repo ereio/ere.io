@@ -37,10 +37,11 @@ const Header = () => (
 			</div>
 		</div>
 		<nav class={style.navi}>
-			<Link activeClassName={style.testing} href="/why">me</Link>
+			<Link activeClassName={style.clicked} href="/under">under construction</Link>
+			{/* <Link activeClassName={style.testing} href="/why">me</Link>
 			<Link activeClassName={style.testing} href="/work">work</Link>
 			<Link activeClassName={style.testing} href="/blog">blog</Link>
-			<Link activeClassName={style.testing} href="/contact">contact</Link>
+			<Link activeClassName={style.testing} href="/contact">contact</Link> */}
 		</nav>
 	</header>
 );

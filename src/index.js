@@ -4,11 +4,12 @@ import { Router } from 'preact-router';
 import Header from './components/header';
 
 // Code-splitting is automated for routes
-import Home from './routes/home';
-import Why from './routes/why';
-import Work from './routes/work';
-import Blog from './routes/blog';
-import Contact from './routes/contact';
+import Home from './views/home';
+import Why from './views/why';
+import Work from './views/work';
+import Blog from './views/blog';
+import Ok from './views/ok';
+import Contact from './views/contact';
 
 import './index.css';
 
@@ -28,7 +29,7 @@ class App extends Component {
                 <Header />
                 <Router onChange={this.handleRoute}>
                     {/* <Home path="/" />
-                    <Why path="/why" />
+                    <Why   />
                     <Work path="/work" />
                     <Blog path="/blog" />
                     <Contact path="/contact" /> */}

@@ -18,9 +18,8 @@
 
 .header nav a {
 	height: 10vh;
-	width: 18vw;
-	min-width: 85px; 
-	max-width: 110px;
+	width: 20vw;
+	min-width: 85px;  
 	min-height: 25px;
 	max-height: 45px;
 
@@ -44,7 +43,7 @@
 	will-change: background-color;
 }
 
-.header nav a:nth-child(4){
+.header nav a:last-child {
 	border-right-width: 0;
 }
 
@@ -56,7 +55,7 @@
     -webkit-transition: background-color  0.25s ease-in-out;
 }
 
-.header nav a.testing {
+.header nav a.clicked {
 	background-color: rgba(255,255,255,0.65); 
 	color: #000000; 
 }
