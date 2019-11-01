@@ -19,7 +19,7 @@ html, body {
 
 #app { 
 	flex:1; 
-	height: 100vh;
+	height: 100vh; 
 	
 	display:flex;
 	flex-direction: column; 
@@ -31,12 +31,21 @@ html, body {
 	height: 100vh;
 	width: 100vw;
 	left: 0;
-	top: 0; 
-	/* background-position: 50%; */
+	top: 0;  
+	-webkit-animation: fadein 0.75s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 0.75s; /* Firefox < 16 */
+	 -ms-animation: fadein 0.75s; /* Internet Explorer */
+	  -o-animation: fadein 0.75s; /* Opera < 12.1 */
+		 animation: fadein 0.75s;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 1; 
 } 
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 #background:after,
 #background:before {
@@ -61,11 +70,10 @@ html, body {
 
 #background:after {
 	background-image: url(/assets/graphics/background_2.png); 
-
-	-webkit-transform:scale(1.125);
+	filter: blur(0.25px);
+	transform: scale(1.125);
 	background-position:50%;
 	background-repeat:no-repeat;
-	background-size:cover;
-	transform:scale(1.125);transition: transform .325s ease-in-out,filter .325s ease-in-out,-webkit-transform .325s ease-in-out,-webkit-filter .325s ease-in-out;
+	background-size:cover;  
 	z-index:1;
 }

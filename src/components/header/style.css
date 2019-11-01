@@ -12,45 +12,178 @@
 .navi {  
 
 	margin-top: 3vh;
-	border: 0.5px solid #fff; 
-	border-radius: 5px;
+	/* border: 0.5px solid #fff;  */
+	/* border-radius: 5px; */
 }
 
 .header nav a {
-	height: 6vw;
-	min-height: 15px;
-	max-height: 30px;
+	height: 10vh;
+	width: 18vw;
+	min-width: 85px; 
+	max-width: 110px;
+	min-height: 25px;
+	max-height: 45px;
 
-	color: #FFF;
-	text-decoration: none;
-
+	color: #FEFEFE;
+	font-size: 1.4em;
+	text-decoration: none; 
 
 	display: inline-flex;
-	align-items: center;
-
-	padding: 0 4vw 0 4vw; 
-	text-align: center;
+	justify-content: center;
+	align-items: center;  
 
 	border-style: solid;
 	border-color: #FFF; 
 	border-width: 0;
 	border-right-width: 0.5px;
 	
-	background: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,0);
+    transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color  0.25s ease-in-out;
+    -webkit-transition: background-color  0.25s ease-in-out;
 	will-change: background-color;
+}
+
+.header nav a:nth-child(4){
+	border-right-width: 0;
 }
 
 .header nav a:hover,
 .header nav a:active { 
-	background: rgba(255,255,255,0.15);
+	background-color: rgba(255,255,255,0.15);
+    transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color  0.25s ease-in-out;
+    -webkit-transition: background-color  0.25s ease-in-out;
 }
 
 .header nav a.testing {
-	background: rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,0.65); 
+	color: #000000; 
 }
-  
+
+.icons {    
+	position: relative;
+	min-width: 159px;
+	min-height: 199px; 
+	pointer-events: none;
+} 
+
+.icons img {
+	opacity: 1;
+}
+
+.icons:hover img {
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}
+
+.icons img:hover, .icons img:hover ~ img {
+	opacity: 1;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}
+
+.topleft{
+	position: absolute; 
+	top: 0;
+	left: 0;
+
+	/* opacity: 1; */
+	z-index: 0;
+	pointer-events: auto;
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.bottom {
+	position: absolute;  
+	width: 84px;
+	bottom: 0;
+	left: 37px;
+
+	z-index: 3;
+	opacity: 1;
+	pointer-events: auto;
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.spout {
+	position: absolute; 
+	top: 37px; 
+	left: 73px;
+
+	z-index: 2;
+	opacity: 1;
+	pointer-events: auto;
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+}
+
+.dot { 
+	position: absolute;  
+	top: 0;
+	right: 0;
+	z-index: 1;
+	height: 38px;  
+	width: 38px; 
+ 
+	opacity: 1;
+	pointer-events: auto;
+    transition: opacity 1s ease-out;
+    -moz-transition: opacity  1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+} 
+
+.stem { 
+	position: absolute; 
+	bottom: 0;
+	right: 0;
+ 
+	opacity: 1;
+	pointer-events: auto;
+    transition: opacity 0.75s ease-out;
+    -moz-transition: opacity  0.75s ease-out;
+    -webkit-transition: opacity 0.75s ease-out;
+} 
+
+.dot:hover ~ .spout, .dot:hover ~ .bottom, .dot:hover ~ .topleft {
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}
+
+.stem:hover ~ .topleft, .stem:hover ~ .spout, .stem:hover ~ .bottom  { 
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}
+
+.spout:hover {
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in; 
+}
+
+
+/* .topleft:hover ~ .bottom, .topleft:hover ~ .stem {
+	opacity: 0;   
+    transition: opacity  0.01s ease-in;
+    -moz-transition: opacity   0.01s ease-in;
+    -webkit-transition: opacity 0.01s ease-in;
+}  */
+/* 
 .ereioIcon {
-	height: 25vw; 
+	height: 35vh; 
 
 	min-width: 60px;
 	min-height: 75px;  
@@ -59,14 +192,69 @@
 	max-height: 130px;  
 }
 
-.ereio-icon-augmented { 
-	height: 12vmin;
-	--augmented-ui: tr-clip r-notch-y br-round bl-clip exe;
-	--aug-border: 20px;
-	--aug-border-bg: black;
-	--aug-tr: 40px;
-	--aug-bl: 60px;
-	--aug-br: 30px;
-	--aug-r-width: 20px;
-	--aug-r-height: 200px; 
+.e {
+	position: fixed;
+	height: 25vw;  
+	min-width: 60px;
+	min-height: 75px;   
+	max-width: 100px;
+	max-height: 130px;  
+	
+    transition: filter 0.75s ease-out;
+    -moz-transition: filter  0.75s ease-out;
+    -webkit-transition: filter 0.75s ease-out;
 }
+.r {
+	position: fixed;
+	height: 25vw;  
+	min-width: 60px;
+	min-height: 75px;   
+	max-width: 100px;
+	max-height: 130px;  
+}
+
+.i { 
+	position: fixed;
+	z-index: 1;
+	height: 25vw;  
+	min-height: 75px;   
+	max-width: 100px;
+	max-height: 130px;  
+
+	opacity: 1;
+    transition: opacity 0.75s ease-out;
+    -moz-transition: opacity  0.75s ease-out;
+    -webkit-transition: opacity 0.75s ease-out;
+} 
+
+.o {
+	position: fixed;
+	height: 25vw;  
+	min-width: 60px;
+	min-height: 75px;   
+	max-width: 100px;
+	max-height: 130px;
+}
+
+.e:hover {
+	filter: invert(100%);
+    transition: filter 0.05s ease-in;
+    -moz-transition: filter  0.05s ease-in;
+    -webkit-transition: filter 0.05s ease-in;
+}
+
+.i:hover{
+	opacity: 0;
+    transition: opacity 0.25s ease-in;
+    -moz-transition: opacity  0.25s ease-in;
+    -webkit-transition: opacity 0.05s ease-in;
+} */
+
+/* .e:active{
+	opacity: 0;
+    transition: opacity 0.25s ease-in;
+    -moz-transition: opacity  0.25s ease-in;
+    -webkit-transition: opacity 0.05s ease-in;
+} */
+
+ 

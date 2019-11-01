@@ -38,9 +38,14 @@ class App extends Component {
         );
     }
 }
-const rootElement = document.body;
-if (rootElement.hasChildNodes()) {
-    render(<App />, rootElement, rootElement.firstElementChild);
+
+if (document) {
+    const rootElement = document.body;
+    if (rootElement.hasChildNodes()) {
+        render(<App />, rootElement, rootElement.firstElementChild);
+    } else {
+        render(<App />, rootElement);
+    }
 } else {
-    render(<App />, rootElement);
-} 
+    render(<App />)
+}

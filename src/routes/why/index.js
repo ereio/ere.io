@@ -8,4 +8,4 @@ const Why = () => (
 	</div>
 );
 
-export default Home;
+export default Why;
