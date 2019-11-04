@@ -21,27 +21,26 @@ const Ereio = (props) => (
 const Header = () => (
 	<header class={style.header}>
 		<div class={style.hover_container}>
-			{/* Could be used to be consistant with hot quadrants */}
-			{/* <div class={style.top_hover} />
-			<div class={style.stem_hover} />
-			<div class={style.spout_hover} /> */}
 			<div class={style.bottom_hover} />
 			<div class={style.top_hover} />
 			<div class={style.left_hover} />
+			<div class={style.stem_hover} />
+
 			<div class={style.icons}>
-				<img src={DOT} class={style.dot} />
-				<img src={STEM} class={style.stem} />
-				<img src={BOTTOM} class={style.bottom} />
-				<img src={TOP_LEFT} class={style.topleft} />
-				<img src={SPOUT} class={style.spout} />
+				<div class={style.top} />
+				<div class={style.left} />
+				<div class={style.dot} />
+				<div class={style.stem} />
+				<div class={style.bottom} />
+				<div class={style.spout} />
 			</div>
 		</div>
 		<nav class={style.navi}>
 			<Link activeClassName={style.clicked} href="/under">under construction</Link>
-			{/* <Link activeClassName={style.testing} href="/why">me</Link>
-			<Link activeClassName={style.testing} href="/work">work</Link>
-			<Link activeClassName={style.testing} href="/blog">blog</Link>
-			<Link activeClassName={style.testing} href="/contact">contact</Link> */}
+			{/* <Link activeClassName={style.testing} href="/why">me</Link> */}
+			{/* <Link activeClassName={style.testing} href="/work">work</Link> */}
+			{/* <Link activeClassName={style.clicked} href="/blog">blog</Link> */}
+			{/* <Link activeClassName={style.testing} href="/contact">contact</Link> */}
 		</nav>
 	</header>
 );

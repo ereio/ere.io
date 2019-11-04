@@ -8,7 +8,6 @@ import Home from './views/home';
 import Why from './views/why';
 import Work from './views/work';
 import Blog from './views/blog';
-import Ok from './views/ok';
 import Contact from './views/contact';
 
 import './index.css';
