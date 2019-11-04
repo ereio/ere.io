@@ -2,8 +2,6 @@ import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style.css';
 
-import { BOTTOM, TOP_LEFT, SPOUT, STEM, DOT } from '../../libs/assets';
-
 // https://stackoverflow.com/questions/54519654/how-do-i-add-color-to-my-svg-image-in-react/54521330
 // https://github.com/pmcalmeida/preact-cli-svg-loader
 // https://github.com/preactjs/preact-cli/wiki/Plugins 
