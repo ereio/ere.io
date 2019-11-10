@@ -13,7 +13,7 @@
     "build": "preact build --no-prerender",
     "build:dist": "./scripts/bundle-dist.sh",
     "serve": "preact build && serve build --single",
-    "deploy": "aws s3 sync ./dist/ s3://ere.io",
+    "deploy": "./scripts/bundle-dist.sh && aws s3 sync ./dist/ s3://ere.io",
     "dev": "preact watch",
     "lint": "eslint src",
     "test": "jest",
