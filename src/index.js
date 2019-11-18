@@ -27,13 +27,14 @@ class App extends Component {
             <div id="app">
                 <Header />
                 <Router onChange={this.handleRoute}>
-                    {/* <Home path="/" />
-                    <Why   />
+                    <Home path="/" />
+                    {/* <Why   />
                     <Work path="/work" />
                     <Blog path="/blog" />
                     <Contact path="/contact" /> */}
                 </Router>
                 <div id='background' />
+                <div id='netlify' />
             </div>
         );
     }
