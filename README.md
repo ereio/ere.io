@@ -7,14 +7,14 @@ Stacks for ere.io so far:
     mail: EC2 t2.small ($0.024/hr)
 
 2)  website: Netlify -> Cloudflare DNS
-    mail: GCP f1-micro ($0.016/hr)
+    mail: GCP f1-micro/g1-small ($0.016/hr / $0.019/hr)
 ```
 
 Stack goals:
 ```
 website: RPI4 -> IPFS -> Cloudflare (Free w/ hosted node)
 mail: RPI4 -> Tunneler
-Tunneller: Cloud Provider Micro -> Cloudflare
+Tunneller: Cloud Provider (micro) -> Cloudflare
 ```
 
 Most of what's holding me back is home network setup.
