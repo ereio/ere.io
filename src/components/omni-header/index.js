@@ -9,11 +9,6 @@ import style from './style.css';
 const Omniheader = () => (
 	<header class={style.header}>
 		<div class={style.hover_container}>
-			<div class={style.bottom_hover} />
-			<div class={style.top_hover} />
-			<div class={style.left_hover} />
-			<div class={style.stem_hover} />
-
 			<div class={style.icons}>
 				<div class={style.top} />
 				<div class={style.left} />
@@ -24,9 +19,9 @@ const Omniheader = () => (
 			</div>
 		</div>
 		<nav class={style.navi}>
-			<Link activeClassName={style.clicked} href="/home">home</Link>
+			<Link activeClassName={style.clicked} href="/">home</Link>
 			<Link activeClassName={style.clicked} href="/blog">blog</Link>
-			<Link activeClassName={style.testing} href="/why">me</Link>
+			<Link activeClassName={style.testing} href="/why">github</Link>
 			{/* <Link activeClassName={style.testing} href="/work">work</Link> */}
 			{/* <Link activeClassName={style.testing} href="/contact">contact</Link> */}
 		</nav>

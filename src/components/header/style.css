@@ -67,7 +67,12 @@
 .hover_container {
 	position: relative;
 }
- 
+
+.icons {    
+	position: relative;
+	min-width: 159px;
+	min-height: 199px;  
+} 
 
 .dot { 
 	width: 38px; 
@@ -257,12 +262,6 @@
     -moz-transition: opacity   0.25s ease-in;
     -webkit-transition: opacity 0.25s ease-in;
 }
-
-.icons {    
-	position: relative;
-	min-width: 159px;
-	min-height: 199px;  
-} 
 
 
 /* .dot:hover ~ .spout, .dot:hover ~ .bottom, .dot:hover ~ .topleft {

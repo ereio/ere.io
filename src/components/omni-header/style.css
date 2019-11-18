@@ -1,6 +1,5 @@
 .header {  
-	height: 100%;
-	flex: 1;
+	height: 5vh; 
 
 	display: flex;
 	flex-direction: column;
@@ -67,11 +66,14 @@
 .hover_container {
 	position: relative;
 }
- 
+
+.icons {    
+	position: relative; 
+} 
 
 .dot { 
-	width: 38px; 
-	height: 38px;  
+	width: 1vh; 
+	height: 1vh;  
 	position: absolute;  
 	top: 0;
 	right: 0;
@@ -257,12 +259,6 @@
     -moz-transition: opacity   0.25s ease-in;
     -webkit-transition: opacity 0.25s ease-in;
 }
-
-.icons {    
-	position: relative;
-	min-width: 159px;
-	min-height: 199px;  
-} 
 
 
 /* .dot:hover ~ .spout, .dot:hover ~ .bottom, .dot:hover ~ .topleft {

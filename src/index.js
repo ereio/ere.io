@@ -1,12 +1,13 @@
 import { h, render, Component } from 'preact';
 import { Router } from 'preact-router';
+import Match from 'preact-router/match';
 
 import Header from './components/header';
+import Omniheader from './components/omni-header';
 
-// Code-splitting is automated for routes
-import Tools from './views/home';
+// Code-splitting is automated for routes 
 import Blog from './views/blog';
-import Why from './views/why';
+import Me from './views/me';
 
 import './index.css';
 
@@ -23,11 +24,12 @@ class App extends Component {
     render() {
         return (
             <div id="app">
-                <Header path="/" />
+                <Match path="*">
+                    {({ matches, path, url }) => path === '/' ? <Header /> : <Omniheader />}
+                </Match>
                 <Router onChange={this.handleRoute}>
-                    <Tools path="/tools" />
                     <Blog path="/blog" />
-                    <Why path="/why" />
+                    <Me path="/why" />
                 </Router>
                 <div id='background' />
                 <div id='netlify' />
