@@ -6,7 +6,7 @@ import style from './style.css';
 // https://github.com/pmcalmeida/preact-cli-svg-loader
 // https://github.com/preactjs/preact-cli/wiki/Plugins  
 
-const Header = () => (
+const Omniheader = () => (
 	<header class={style.header}>
 		<div class={style.hover_container}>
 			<div class={style.bottom_hover} />
@@ -24,13 +24,13 @@ const Header = () => (
 			</div>
 		</div>
 		<nav class={style.navi}>
-			<Link activeClassName={style.testing} href="/me">me</Link>
+			<Link activeClassName={style.clicked} href="/home">home</Link>
 			<Link activeClassName={style.clicked} href="/blog">blog</Link>
-			<a href="https://github.com/ereio">github</a>
+			<Link activeClassName={style.testing} href="/why">me</Link>
 			{/* <Link activeClassName={style.testing} href="/work">work</Link> */}
 			{/* <Link activeClassName={style.testing} href="/contact">contact</Link> */}
 		</nav>
 	</header>
 );
 
-export default Header;
+export default Omniheader;

@@ -32,11 +32,11 @@ html, body {
 	width: 100vw;
 	left: 0;
 	top: 0;  
-	-webkit-animation: fadein 0.75s; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 0.75s; /* Firefox < 16 */
-	 -ms-animation: fadein 0.75s; /* Internet Explorer */
-	  -o-animation: fadein 0.75s; /* Opera < 12.1 */
-		 animation: fadein 0.75s;
+	-webkit-animation: fadein 1.25s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1.25s; /* Firefox < 16 */
+	 -ms-animation: fadein 1.25s; /* Internet Explorer */
+	  -o-animation: fadein 1.25s; /* Opera < 12.1 */
+		 animation: fadein 1.25s;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 1; 
