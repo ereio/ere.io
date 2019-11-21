@@ -65,7 +65,7 @@ html, body {
 	background-size:auto,256px 256px;
 	transition:background-color 2.5s ease-in-out;
 	transition-delay:.75s;
-	z-index:2
+	z-index: 2;
 } 
 
 #background:after {
@@ -74,5 +74,5 @@ html, body {
 	background-position:50%;
 	background-repeat:no-repeat;
 	background-size:cover;  
-	z-index:1;
+	z-index: 1;
 }
