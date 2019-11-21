@@ -1,10 +1,11 @@
 import { h } from 'preact';
 import style from './style.css';
 
+import Header from '../../components/header';
+
 const Blog = () => (
-	<div class={style.blog}>
-		<h1>Home</h1>
-		<p>This is the Home component.</p>
+	<div style={{ flex: 1, zIndex: 5 }}>
+		<Header />
 	</div>
 );
 

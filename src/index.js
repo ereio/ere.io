@@ -7,6 +7,10 @@ import Blog from './views/blog';
 
 import './index.css';
 
+function hydrate(vnode, parent) {
+    return render(vnode, parent, parent.firstElementChild);
+}
+
 class App extends Component {
 
 	/** Gets fired when the route changes.
@@ -22,8 +26,6 @@ class App extends Component {
             <div id="app">
                 <Router onChange={this.handleRoute}>
                     <Main path="/" />
-                    <Blog path="/200" />
-                    <Blog path="/404" />
                     <Blog path="/blog" />
                 </Router>
                 <div id='background' />
@@ -33,15 +35,9 @@ class App extends Component {
     }
 }
 
-document.write('<html><body><div id="root"></div></body></html>')
-
-if (document) {
-    const rootElement = document.body;
-    if (rootElement.hasChildNodes()) {
-        render(<App />, rootElement, rootElement.firstElementChild);
-    } else {
-        render(<App />, rootElement);
-    }
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+    hydrate(<App />, rootElement);
 } else {
-    render(<App />)
+    render(<App />, rootElement);
 }
