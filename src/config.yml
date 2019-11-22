@@ -5,6 +5,15 @@ publish_mode: editorial_workflow
 media_folder: "src/static/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/uploads"
 collections:
+  - name: "interest"
+    label: 'Interest'
+    folder: "src/static/interests"
+    create: true 
+    identifier_field: name
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Title", name: "title", widget: "string", default: "Coffee"}
+      - {label: "Avatar", name: "avatar", widget: "image"}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "src/static/posts" # The path to the folder where the documents are stored

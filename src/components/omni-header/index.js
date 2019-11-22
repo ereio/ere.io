@@ -8,12 +8,10 @@ import style from './style.css';
 
 const Omniheader = () => (
 	<header class={style.header}>
-		<nav class={style.navi}>
+		<nav style={{ padding: 50 }}>
 			<Link activeClassName={style.clicked} href="/">me</Link>
 			<Link activeClassName={style.clicked} href="/blog">blog</Link>
-			<Link activeClassName={style.testing} href="/github">github</Link>
-			{/* <Link activeClassName={style.testing} href="/work">work</Link> */}
-			{/* <Link activeClassName={style.testing} href="/contact">contact</Link> */}
+			<Link activeClassName={style.clicked} href="/github">github</Link>
 		</nav>
 	</header>
 );
