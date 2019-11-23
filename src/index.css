@@ -1,31 +1,27 @@
 html, body {
+	display: flex; 
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 
-	color:#fff;
-	background: #1b1f22;
 	font-family: 'Source Sans Pro',sans-serif; 
 	font-size: 1rem;
 	font-weight: 200; 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; 
 }
+ 
 
 * {
 	box-sizing: border-box;
 }
 
-#app { 
-	flex:1; 
-	height: 100vh; 
-	
-	display:flex;
-	flex-direction: column; 
-	justify-content: center;
-} 
- 
+#root, #app {  
+	height: 100%;
+	width: 100%;
+}  
+
 #background {
 	position: fixed;
 	height: 100vh;
@@ -75,4 +71,11 @@ html, body {
 	background-repeat:no-repeat;
 	background-size:cover;  
 	z-index: 1;
+}
+
+a {
+    font-style: normal;
+    color: rgba(0,0,0,.8);
+	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
 }

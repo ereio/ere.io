@@ -2,9 +2,12 @@ import { h, render, Component } from 'preact';
 import { Router } from 'preact-router';
 
 // Code-splitting is automated for routes 
-import Main from './views';
+import Home from './views/home';
 import Blog from './views/blog';
+import Post from './views/blog/post'
 
+import 'normalize.css';
+import './reset.css';
 import './index.css';
 
 function hydrate(vnode, parent) {
@@ -25,11 +28,10 @@ class App extends Component {
         return (
             <div id="app">
                 <Router onChange={this.handleRoute}>
-                    <Main path="/" />
+                    <Home path="/" default />
                     <Blog path="/blog" />
+                    <Post path="/blog/:post" />
                 </Router>
-                <div id='background' />
-                <div id='netlify' />
             </div>
         );
     }
