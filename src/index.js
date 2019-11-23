@@ -7,7 +7,6 @@ import Blog from './views/blog';
 import Post from './views/blog/post'
 
 import 'normalize.css';
-import './reset.css';
 import './index.css';
 
 function hydrate(vnode, parent) {

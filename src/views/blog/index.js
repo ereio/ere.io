@@ -36,7 +36,6 @@ const posts = [
 		body: "An Code example with PrismJS Gatsby-Starter-Julia uses the Atom Editor Theme. Default NodeJS server",
 		slug: "testing-an-article-title-5"
 	},
-
 ]
 
 const Headline = ({ post }) => {
