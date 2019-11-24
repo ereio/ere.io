@@ -1,6 +1,6 @@
 # ere.io
 
-## my website - note i'm using this readme for drafting for a bit
+## my website
 
 #### things that are under the domain:
 - the website
