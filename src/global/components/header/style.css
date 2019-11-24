@@ -1,0 +1,74 @@
+.header {   
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;    
+}
+
+.nav {
+	padding-top: 24px
+}
+ 
+.header nav a {
+	height: 10vh;
+	width: 10vw;
+	min-width: 85px;  
+	min-height: 25px;
+	max-height: 45px;
+
+	color: #000000;
+	font-size: 1.4em;
+	text-decoration: none; 
+	
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+
+	border-style: solid;
+	border-color: #FFF; 
+	border-width: 0;
+	border-right-width: 0.5px;
+}
+
+.header nav a:first-child { 
+	opacity: 1;
+	display: inline-flex;  
+}
+ 
+.header nav a:last-child {
+	border-right-width: 0; 
+}
+
+.header nav a::after { 
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 2px;
+	bottom: 0; 
+	
+	background-color:rgba(0,0,0,0.8);
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86,0,0.07,1);
+	-webkit-transition: transform 0.4s cubic-bezier(0.86,0,0.07,1);
+	transition: transform .5s ease,-webkit-transform .5s ease;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+}
+
+.header nav a:hover::after,
+.header nav a:active::after { 
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); 
+}
+ 
+.header nav a.clicked {
+	background-color: rgba(255,255,255,0.65); 
+	color: #000000; 
+}

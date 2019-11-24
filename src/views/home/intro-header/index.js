@@ -6,9 +6,14 @@ import style from './style.css';
 // https://github.com/pmcalmeida/preact-cli-svg-loader
 // https://github.com/preactjs/preact-cli/wiki/Plugins  
 
-const Omniheader = () => (
+const Header = () => (
 	<header class={style.header}>
 		<div class={style.hover_container}>
+			<div class={style.bottom_hover} />
+			<div class={style.top_hover} />
+			<div class={style.left_hover} />
+			<div class={style.stem_hover} />
+
 			<div class={style.icons}>
 				<div class={style.top} />
 				<div class={style.left} />
@@ -19,13 +24,11 @@ const Omniheader = () => (
 			</div>
 		</div>
 		<nav class={style.navi}>
-			<Link activeClassName={style.clicked} href="/">home</Link>
+			<Link activeClassName={style.testing} href="/">me</Link>
 			<Link activeClassName={style.clicked} href="/blog">blog</Link>
-			<Link activeClassName={style.testing} href="/why">github</Link>
-			{/* <Link activeClassName={style.testing} href="/work">work</Link> */}
-			{/* <Link activeClassName={style.testing} href="/contact">contact</Link> */}
+			<a href="https://github.com/ereio" native>github</a>
 		</nav>
 	</header>
 );
 
-export default Omniheader;
+export default Header;

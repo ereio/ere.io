@@ -28,9 +28,12 @@
     "build/*"
   ],
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "preact": "^10.0.1",
+    "preact-compat": "^3.19.0",
     "preact-render-to-string": "^5.1.0",
-    "preact-router": "^3.0.0"
+    "preact-router": "^3.0.0",
+    "react-markdown": "^4.2.2"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
@@ -54,6 +57,7 @@
     ]
   },
   "reactSnap": {
+    "inlineCss": true,
     "source": "build",
     "destination": "build",
     "removeScriptTags": true

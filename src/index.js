@@ -1,15 +1,17 @@
 import { h, render, Component } from 'preact';
 import { Router } from 'preact-router';
-import Match from 'preact-router/match';
-
-import Header from './components/header';
-import Omniheader from './components/omni-header';
 
 // Code-splitting is automated for routes 
+import Home from './views/home';
 import Blog from './views/blog';
-import Me from './views/me';
+import Post from './views/blog/post'
 
+import 'normalize.css';
 import './index.css';
+
+function hydrate(vnode, parent) {
+    return render(vnode, parent, parent.firstElementChild);
+}
 
 class App extends Component {
 
@@ -24,27 +26,19 @@ class App extends Component {
     render() {
         return (
             <div id="app">
-                <Match path="*">
-                    {({ matches, path, url }) => path === '/' ? <Header /> : <Omniheader />}
-                </Match>
                 <Router onChange={this.handleRoute}>
+                    <Home path="/" default />
                     <Blog path="/blog" />
-                    <Me path="/why" />
+                    <Post path="/blog/:post" />
                 </Router>
-                <div id='background' />
-                <div id='netlify' />
             </div>
         );
     }
 }
 
-if (document) {
-    const rootElement = document.body;
-    if (rootElement.hasChildNodes()) {
-        render(<App />, rootElement, rootElement.firstElementChild);
-    } else {
-        render(<App />, rootElement);
-    }
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+    hydrate(<App />, rootElement);
 } else {
-    render(<App />)
+    render(<App />, rootElement);
 }
