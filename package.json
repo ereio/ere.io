@@ -58,7 +58,7 @@
     ]
   },
   "reactSnap": {
-    "inlineCss": true,
+    "inlineCss": false,
     "source": "build",
     "destination": "build",
     "removeScriptTags": true
