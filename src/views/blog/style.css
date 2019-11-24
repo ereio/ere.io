@@ -4,9 +4,12 @@
 	max-width: 860px;
 }
 
-h2,h3 {
-	padding: 0;
-    margin: 0 0 1.45rem;
+h1, h2,h3, h4, h5, h6 { 
+    padding: 0;
+    margin: 0;
+}
+
+h2,h3 { 
     color: inherit;
     font-weight: 700;
     text-rendering: optimizeLegibility;

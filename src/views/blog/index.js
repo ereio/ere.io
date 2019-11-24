@@ -2,7 +2,7 @@ import { h } from 'preact';
 import style from './style.css';
 import { Link } from 'preact-router/match';
 
-import Omniheader from '../../components/omni-header/index';
+import Header from '../../global/components/header';
 
 const posts = [
 	{
@@ -43,7 +43,7 @@ const Headline = ({ post }) => {
 	return (
 		<Link activeClassName={style.activeLink} href={"/blog/" + slug}>
 			<div style={{ flex: 1, marginTop: '8vh', marginBottom: '8vh' }}>
-				<h2>{title}</h2>
+				<h2 style={{ marginBottom: 8 }}>{title}</h2>
 				<h4>{date}</h4>
 				<p>{`${body.slice(0, 120)}...`}</p>
 			</div>
@@ -58,7 +58,7 @@ const Blog = () => {
 	));
 	return (
 		<div style={{ flex: 1 }}>
-			<Omniheader />
+			<Header />
 			<main class={style.main}>
 				{headlines}
 			</main>

@@ -9,13 +9,13 @@ const path = require('path');
 export default function (config, env, helpers) {
 
     config.module.rules[4].include = [
-        path.resolve(__dirname, 'src', 'routes'),
+        path.resolve(__dirname, 'src', 'global'),
         path.resolve(__dirname, 'src', 'components'),
         path.resolve(__dirname, 'src', 'views')
     ];
 
     config.module.rules[5].exclude = [
-        path.resolve(__dirname, 'src', 'routes'),
+        path.resolve(__dirname, 'src', 'global'),
         path.resolve(__dirname, 'src', 'components'),
         path.resolve(__dirname, 'src', 'views')
     ];
