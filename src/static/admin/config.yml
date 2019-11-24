@@ -5,15 +5,27 @@ publish_mode: editorial_workflow
 media_folder: "src/static/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/uploads"
 collections:
+  - name: "topic" 
+    label: "Topic"  
+    folder: "src/static/topics" 
+    create: true  
+    slug: "{{slug}}" 
+    extension: json
+    widget: "list"
+    fields:  
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Name", name: "name", widget: "string", default: ""} 
+      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Description", name: "description", widget: "markdown"}
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
-    folder: "src/static/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    folder: "src/static/posts" 
+    create: true  
+    slug: "{{slug}}" 
     extension: json
-    fields: # The fields for each document, usually in front matter
+    fields: 
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string", default: "This was a mistake"}
+      - {label: "Title", name: "title", widget: "string", default: "Who we're not and what we are"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
