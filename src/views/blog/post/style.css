@@ -1,5 +1,5 @@
-.blog {
-	padding: 56px 20px;
-	min-height: 100%;
-	width: 100%;
-}  
+.main {
+	margin: 0 auto;
+	padding: 4vh 5vw; 
+	max-width: 860px;
+}

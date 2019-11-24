@@ -1,16 +1,27 @@
 import { h } from 'preact';
-import style from './style.css';
-import ReactMarkdown from 'react-markdown';
+import Marked from 'marked';
+import Markup from 'preact-markup';
 
+
+
+import style from './style.css';
 import Header from '../../../global/components/header';
 
-const Post = ({ title, body, date }) => {
+const Post = () => {
+
+	// Get Post Json Only
+	const paths = window.location.href.split('/');
+	const slug = paths[paths.length - 1];
+	const post = require(`../../../static/posts/${slug}`);
+
+	const { title, body } = post;
 	return (
 		<div style={{ flex: 1, zIndex: 5 }}>
 			<Header />
 			<main class={style.main}>
 				<h1>{title}</h1>
-				{/* <ReactMarkdown source={body} /> */}
+				{/** TODO: preact-markup is broken and will only be run locally anyway */}
+				<span dangerouslySetInnerHTML={{ __html: Marked(body) }} />
 			</main>
 		</div>
 	)

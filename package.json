@@ -13,6 +13,7 @@
     "build": "preact build --no-prerender",
     "build:dist": "./scripts/bundle-dist.sh",
     "serve": "preact build && serve build --single",
+    "generate": "node ./scripts/generate-statics.js",
     "old:aws:deploy": "./scripts/bundle-dist.sh && aws s3 sync ./dist/ s3://ere.io --delete",
     "deploy": "yarn build:dist && netlify deploy --dir=./dist/",
     "deploy:prod": "yarn build:dist && netlify deploy --prod --dir=./dist/",
@@ -28,12 +29,12 @@
     "build/*"
   ],
   "dependencies": {
+    "marked": "^0.7.0",
     "normalize.css": "^8.0.1",
     "preact": "^10.0.1",
-    "preact-compat": "^3.19.0",
+    "preact-markup": "^1.6.0",
     "preact-render-to-string": "^5.1.0",
-    "preact-router": "^3.0.0",
-    "react-markdown": "^4.2.2"
+    "preact-router": "^3.0.0"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
@@ -57,7 +58,7 @@
     ]
   },
   "reactSnap": {
-    "inlineCss": false,
+    "inlineCss": true,
     "source": "build",
     "destination": "build",
     "removeScriptTags": true
