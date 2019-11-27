@@ -4,7 +4,8 @@ import { Router } from 'preact-router';
 // Code-splitting is automated for routes 
 import Home from './views/home';
 import Blog from './views/blog';
-import Post from './views/blog/post'
+import Post from './views/blog/post';
+import Things from './views/things';
 
 import 'normalize.css';
 import './index.css';
@@ -28,6 +29,9 @@ class App extends Component {
             <div id="app">
                 <Router onChange={this.handleRoute}>
                     <Home path="/" default />
+                    <Home path="/me" />
+                    <Things path="/things" />
+                    <Things path="/things/:thing" />
                     <Blog path="/blog" />
                     <Post path="/blog/:post" />
                 </Router>

@@ -24,7 +24,8 @@ const Header = () => (
 			</div>
 		</div>
 		<nav class={style.navi}>
-			<Link activeClassName={style.testing} href="/">me</Link>
+			<Link activeClassName={style.testing} href="/me">me</Link>
+			<Link activeClassName={style.clicked} href="/things">things</Link>
 			<Link activeClassName={style.clicked} href="/blog">blog</Link>
 			<a href="https://github.com/ereio" native>github</a>
 		</nav>

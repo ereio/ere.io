@@ -1,1 +1,1 @@
-export const EREIO_ICON = 'assets/icons/ereio.png'; 
+export const EREIO_ICON = 'assets/icons/ereio.svg'; 

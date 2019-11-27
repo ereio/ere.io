@@ -1,6 +1,5 @@
 import { h } from 'preact';
 import Marked from 'marked';
-import Markup from 'preact-markup';
 
 
 

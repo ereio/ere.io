@@ -1,4 +1,5 @@
 const path = require('path');
+const preactCliSvgLoader = require('preact-cli-svg-loader');
 
 
 // Custom folders for css 
@@ -19,4 +20,6 @@ export default function (config, env, helpers) {
         path.resolve(__dirname, 'src', 'components'),
         path.resolve(__dirname, 'src', 'views')
     ];
+
+    preactCliSvgLoader(config, helpers);
 }

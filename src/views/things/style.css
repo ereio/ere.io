@@ -1,0 +1,81 @@
+ 
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 4vh 1fr 4vh;
+    grid-template-areas:
+      'nothing header'
+      'topics main'
+      'topics main'
+      'topics main'
+      'topics main'
+      'topics main'
+      'topics footer'; 
+    grid-gap: 4px; 
+	padding: 4vh 2vw; 
+}
+
+.note {
+    opacity: 0;
+}
+
+.note.active {
+    opacity: 1;
+}
+
+.content {
+	position: absolute;
+    padding: 8px;
+}
+
+.topic {
+    justify-content: 'center';
+    padding: 8px;
+}
+
+.topic::after { 
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 2px;
+	bottom: 0; 
+	
+	background-color:rgba(0,0,0,0.8);
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86,0,0.07,1);
+	-webkit-transition: transform 0.4s cubic-bezier(0.86,0,0.07,1);
+	transition: transform .5s ease,-webkit-transform .5s ease;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+}
+ 
+.activeTopic { 
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); 
+}
+
+h1, h2,h3, h4, h5, h6 { 
+    padding: 0;
+    margin: 0;
+}
+
+h2,h3 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
+
+h4, h5, h6 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}

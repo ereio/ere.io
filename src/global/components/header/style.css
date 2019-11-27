@@ -7,14 +7,22 @@
 
 .nav {
 	margin: 24px 0;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
- 
+
+.icon::after {
+	height: 0px !important;
+}
+
 .header nav a {
 	height: 10vh;
 	width: 10vw;
-	min-width: 85px;  
-	min-height: 25px;
-	max-height: 45px;
+	min-width: 64px;  
+	min-height: 24px;
+	max-height: 48px;
+	margin-right: 4px;
 
 	color: #000000;
 	font-size: 1.4em;
@@ -61,7 +69,8 @@
 }
 
 .header nav a:hover::after,
-.header nav a:active::after { 
+.header nav a:active::after,
+.activeLink { 
     -webkit-transform-origin: bottom left;
     transform-origin: bottom left;
     -webkit-transform: scaleX(1);
