@@ -9,10 +9,11 @@ collections:
     label: "Topic"  
     folder: "src/static/things" 
     create: true  
+    identifier_field: name
     slug: "{{slug}}" 
     extension: json
     widget: "list"
-    fields:  
+    fields: 
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Name", name: "name", widget: "string", default: ""} 
       - {label: "Avatar", name: "avatar", widget: "image", required: false}
