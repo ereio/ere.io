@@ -1,4 +1,7 @@
- 
+ /*
+https://stackoverflow.com/questions/49025403/max-width-with-css-grid
+ https://alligator.io/css/css-grid-layout-fr-unit/
+  */
 .main {
     flex: 1;
     display: grid;

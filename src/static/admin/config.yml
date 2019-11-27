@@ -15,7 +15,7 @@ collections:
     fields:  
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Name", name: "name", widget: "string", default: ""} 
-      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Avatar", name: "avatar", widget: "image", required: false}
       - {label: "Notes", name: "notes", widget: "markdown"}
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
