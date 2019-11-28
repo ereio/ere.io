@@ -5,13 +5,13 @@ const fs = require('fs');
  * @param {string} dir
  * @returns {Array} Array of objects
  */
-const getFiles = dir => {
+const getFileList = dir => {
     const files = fs.readdirSync(dir)
 
     let filelist = []
 
     files.forEach(file => {
-        const fileJson = fs.readFileSync(`src/static/posts/${file}`, 'utf-8')
+        const fileJson = fs.readFileSync(`${dir}${file}`, 'utf-8')
         filelist.push(fileJson)
     });
 
@@ -21,12 +21,25 @@ const getFiles = dir => {
 /**
  * Write blogs json file
  */
-const writeBlogs = async () => {
-    const fileArray = await getFiles('./src/static/posts/');
+const writeAllBlogs = async () => {
+    const fileArray = await getFileList('./src/static/posts/');
     const jsonContent = await JSON.stringify(fileArray);
     fs.writeFile('src/static/all-posts.json', jsonContent, err => {
         if (err) throw new Error(err)
     })
 }
 
-writeBlogs();
+/**
+ * Write things json file
+ */
+const writeAllThings = async () => {
+    const fileArray = await getFileList('./src/static/things/');
+    const jsonContent = await JSON.stringify(fileArray);
+    fs.writeFile('src/static/all-things.json', jsonContent, err => {
+        if (err) throw new Error(err)
+    })
+}
+
+
+writeAllBlogs();
+writeAllThings();
