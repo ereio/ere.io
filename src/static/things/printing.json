@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "printing",
-  "notes": "## Notes on 3D printing\n\nStacks for a printer:\n- Boards\n  - Mega Arduino w/ RAMPS\n  - RAMBo mini (RepRap Arduino-compatible Mother Board)\n  - EINSY RAMBo\n- [Firmware](https://reprap.org/wiki/List_of_Firmware)\n  - Marlin\n  - RAMPS\n\n\nRAMBo boards are based on Arduino, most probably are"
+  "notes": "## Notes on 3D printing\n\nStacks for a printer:\n- Boards\n  - Mega Arduino w/ RAMPS\n  - RAMBo mini (RepRap Arduino-compatible Mother Board)\n  - [EINSY RAMBo](https://www.printedsolid.com/products/einsy-rambo-1-1)\n- [Firmware](https://reprap.org/wiki/List_of_Firmware)\n  - Marlin\n  - RAMPS (?)\n\n\nRAMBo boards are based on Arduino, most probably are"
 }
