@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "react-native",
-  "notes": "## Notes on React Native\n\n### Stub for architecture\n\n### Tricks\n<details><summary>Custom iOS Back</summary><p>\n\n```jsx\n   <TouchableOpacity\n    onPress={navigation.getParam('onNavigateBack')}\n    style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>\n        <Icon style={{ color: navColors.appleBlue, paddingTop: 3, fontSize: 34 }} name='ios-arrow-back' />\n        <Text style={{ color: navColors.appleBlue, paddingLeft: 4, fontSize: 18 }} >Back</Text>\n    </TouchableOpacity>\n```\n</p></details>"
+  "notes": "## Notes on React Native\n\n### Stub for architecture\n\n### Attempts \n - Cannot get the performance of static StyleSheet.create and have dynamic values inside the stylesheet ([flatten wont work](https://stackoverflow.com/questions/29363671/can-i-make-dynamic-styles-in-react-native))\n\n\n### Tricks\n<details><summary>Custom iOS Back</summary><p>\n\n```jsx\n   <TouchableOpacity\n    onPress={navigation.getParam('onNavigateBack')}\n    style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>\n        <Icon style={{ color: navColors.appleBlue, paddingTop: 3, fontSize: 34 }} name='ios-arrow-back' />\n        <Text style={{ color: navColors.appleBlue, paddingLeft: 4, fontSize: 18 }} >Back</Text>\n    </TouchableOpacity>\n```\n</p></details>"
 }
