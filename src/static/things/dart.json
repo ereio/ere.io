@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "dart",
-  "notes": "## Dart / Flutter\n\nLayouts\n* Use containers that span the height and width of the screen when creating scroll views\n\nTodo\n* find a more explicit way to style with flex\n\n\n\n"
+  "notes": "## Dart / Flutter\n\n### Architecture\n\n* Using redux with streams\n  * Timer vs. Stream\n    * The store itself is a stream that can be listened too\n    * The only thing different between them is where you want the stream within the store observed from? the view or still within the store\n    * Within the store has an extra layer, but has a separation of concerns\n  * Example is initing a chat observer after authentication\n    * Leaving this in the view is less friction with streams on streams\n    * But you sacrifice separation\n\n\nLayouts\n\n* Use containers that span the height and width of the screen when creating scroll views\n\nTodo\n\n* find a more explicit way to style with flex"
 }
