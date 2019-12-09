@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "rust",
+  "notes": "## Notes on Rust\n\n* GUI standard or best practice [seems fragmented](https://raphlinus.github.io/ui/druid/2019/11/22/reactive-ui.html)\n  * [moxie](https://blog.anp.lol/rust/moxie-intro/)\n  * [druid](https://github.com/xi-editor/druid)\n\n* Would be preferred over flutter, in terms of accessibility and portability, if the developer experience was more straight forward\n* It's already hard to sell dart/flutter as inclusive and friendly to web devs"
+}
