@@ -5,12 +5,21 @@ import style from './style.css';
 
 import Header from '../../global/components/header';
 import things from '../../static/all-things.json';
+import '../../static/prism.css';
+
 
 // Personal Knowledge Base
 // https://alligator.io/css/css-grid-layout-fr-unit/
 const Things = () => {
+	const paths = window.location.href.split('/');
+	const slug = paths[paths.length - 1];
 
-	const topicList = things.map((thingJson) => {
+	const thing = things.reduce((found, thingJson) => {
+		const thing = JSON.parse(thingJson);
+		return thing.name === slug ? thing : found;
+	}, {});
+
+	const thingList = things.map((thingJson) => {
 		const thing = JSON.parse(thingJson);
 		const slug = thing.name.toLowerCase().replace(/ /g, '-');
 		return (
@@ -22,36 +31,26 @@ const Things = () => {
 		)
 	});
 
-	const topicContentList = things.map((thingJson) => {
-		const thing = JSON.parse(thingJson);
-		const slug = thing.name.toLowerCase().replace(/ /g, '-');
-		return (
-			<Link class={style.note} activeClassName={style.active} href={`/things/${slug}`}>
-				<div class={style.content}>
-					<span dangerouslySetInnerHTML={{ __html: Marked(thing.notes) }} />
-				</div>
-			</Link>
-		)
-	});
-
 	return (
 		<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
 			<Header />
 			<main class={style.main}>
+				<div style={{ gridArea: 'topics' }}>
+					{thingList}
+				</div>
 				<Match path="/things">
 					{({ matches }) => {
-						return !matches ? undefined :
-							(<h3 style={{ marginBottom: '4vh', gridArea: 'header' }}>
+						return matches ?
+							<h3 style={{ gridArea: 'main' }}>
 								Welcome to my personal knowlege base
-								</h3>);
+							</h3> :
+							<div style={{ gridArea: 'main' }}>
+								<div class={style.content}>
+									<span dangerouslySetInnerHTML={{ __html: Marked(thing.notes) }} />
+								</div>
+							</div>
 					}}
 				</Match>
-				<div style={{ gridArea: 'topics' }}>
-					{topicList}
-				</div>
-				<div style={{ gridArea: 'main' }}>
-					{topicContentList}
-				</div>
 			</main>
 		</div>
 	)

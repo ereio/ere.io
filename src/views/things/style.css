@@ -8,7 +8,7 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 4vh 1fr 4vh;
     grid-template-areas:
-      'nothing header'
+      'nothing main'
       'topics main'
       'topics main'
       'topics main'
@@ -19,12 +19,15 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
 	padding: 4vh 2vw; 
 }
 
-.note {
-    opacity: 0;
+.note { 
+    display: none;
+    pointer-events: none;
 }
 
 .note.active {
-    opacity: 1;
+    opacity: 1;  
+    display: flex;  
+    pointer-events: visible;
 }
 
 .content {

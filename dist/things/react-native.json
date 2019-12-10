@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "react-native",
+  "notes": "## Notes on React Native\n\n### Stub for architecture\n\n### Tricks\n<details><summary>Custom iOS Back</summary><p>\n\n```jsx\n   <TouchableOpacity\n    onPress={navigation.getParam('onNavigateBack')}\n    style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>\n        <Icon style={{ color: navColors.appleBlue, paddingTop: 3, fontSize: 34 }} name='ios-arrow-back' />\n        <Text style={{ color: navColors.appleBlue, paddingLeft: 4, fontSize: 18 }} >Back</Text>\n    </TouchableOpacity>\n```\n</p></details>"
+}
