@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "open hardware",
+  "notes": "## Open Hardware\n\n#### \\- Laptop\n\n#### \\- Lapdock + Portable SoC Board\n\n* [Nexdock 2]()\n* ROC-RK3328-CC (Renegade)\n  * 4gb DDR4\n  * 4 ARM Cortex-A53 @ 1.4GHz\n  * [ARM Mali-450 MP4](https://www.notebookcheck.net/ARM-Mali-450-MP4.116281.0.html)"
+}
