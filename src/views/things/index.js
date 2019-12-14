@@ -76,7 +76,6 @@ const Things = () => {
 						const { matches, path } = args;
 						const paths = path.split(/\/|\?/g);
 						const slug = paths[paths.length - 1];
-						console.log(slug)
 						const thing = things.find((thing) => thing.name === slug)
 
 						return matches ?
