@@ -47,20 +47,36 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
     padding: 8px;
 }
 
+
 .topic { 
-    flex:1;
+    flex:1; 
+    color: #292929;
+    position: relative;
     justify-content: 'center';
-    margin-top: 8px;
+    width: max-content;
+    text-align: 'left';
+    margin-top: 12px;
     margin-bottom: 12px;
+    color: inherit; 
+    font-weight: 700; 
+    text-rendering: optimizeLegibility; 
+    line-height: 1.1;
+}
+ 
+.topic:active {
+    color: grey;
 }
 
-.topic h4::after {  
-	content: "";
-	position: absolute;
-	width: 80%;
+.topic::after {   
+    content: "";
+    position: absolute;
+    margin-bottom: -4px;
+	width: 100%;
 	height: 2px;
 	bottom: 0; 
-	
+    left: 0; 
+    
+
 	background-color:rgba(0,0,0,0.8);
 	-webkit-transform-origin: bottom right;
 	-ms-transform-origin: bottom right;
@@ -74,14 +90,16 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
 	transform: scaleX(0);
 }
  
-.topic h4:hover::after,
-.topic h4:active::after,
-.activeTopic div h4:active {  
+.topic:hover::after,
+.topic:active::after,
+.current .topic::after {  
     -webkit-transform-origin: bottom left;
     transform-origin: bottom left;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); 
 }
+
+
 
 h1, h2,h3, h4, h5, h6 { 
     padding: 0;

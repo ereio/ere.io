@@ -27,33 +27,34 @@ import '../../static/prism.js';
 */
 const Things = () => {
 	const things = thingsJson.map((json) => JSON.parse(json));
-
-	const renderSearch = () => {
-		const options = things.map(thing =>
-			<Link activeClass={style.activeTopic} href={`/things/${thing.name}`}>
-				<div class={style.topic}>
-					<h4 style={{ textAlign: 'start' }}>{thing.name}</h4>
-				</div>
-			</Link>
-		)
-
-		return (
-			<form action="/things">
-				<datalist id="things" style={{ display: 'inherit' }}>
-					{options}
-				</datalist>
-			</form >
-		)
-	}
+	/*
+	  const renderSearch = () => {
+		  const options = things.map(thing =>
+			  <Link activeClass={style.activeTopic} href={`/things/${thing.name}`}>
+				  <div class={style.topic}>
+					  <h4 style={{ textAlign: 'start' }}>{thing.name}</h4>
+				  </div>
+			  </Link>
+		  )
+  
+		  return (
+			  <form action="/things">
+				  <datalist id="things" style={{ display: 'inherit' }}>
+					  {options}
+				  </datalist>
+			  </form >
+		  )
+	  }
+	  */
 
 	const renderThingList = () => {
 		return things.map((thing) => {
 			const slug = thing.name.toLowerCase().replace(/ /g, '-');
 			return (
-				<Link activeClass={style.activeTopic} href={`/things/${slug}`}>
-					<div class={style.topic}>
-						<h4 style={{ textAlign: 'left' }}>{thing.name}</h4>
-					</div>
+				<Link activeClassName={style.current} href={`/things/${slug}`}>
+					<h4 class={style.topic}>
+						{thing.name}
+					</h4>
 				</Link>
 			)
 		});
