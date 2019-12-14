@@ -1,47 +1,85 @@
 import { h } from 'preact';
 import Marked from 'marked';
 import Match, { Link } from 'preact-router/match';
+
+// Components
+import Header from '../../global/components/header';
+
+// Styling
 import style from './style.css';
 
-import Header from '../../global/components/header';
-import things from '../../static/all-things.json';
+// Static Data
+import thingsJson from '../../static/all-things.json';
+
+// External Implicit Imports
 import '../../static/prism.css';
+import '../../static/prism.js';
 
 
 // Personal Knowledge Base
 // https://alligator.io/css/css-grid-layout-fr-unit/
+
+/*
+<div>
+ <div class={style.search} contenteditable="true">
+	Search Topics
+</div> 
+*/
 const Things = () => {
-	const paths = window.location.href.split('/');
-	const slug = paths[paths.length - 1];
+	const things = thingsJson.map((json) => JSON.parse(json));
 
-	const thing = things.reduce((found, thingJson) => {
-		const thing = JSON.parse(thingJson);
-		return thing.name === slug ? thing : found;
-	}, {});
-
-	const thingList = things.map((thingJson) => {
-		const thing = JSON.parse(thingJson);
-		const slug = thing.name.toLowerCase().replace(/ /g, '-');
-		return (
-			<Link activeClass={style.activeTopic} href={`/things/${slug}`}>
+	const renderSearch = () => {
+		const options = things.map(thing =>
+			<Link activeClass={style.activeTopic} href={`/things/${thing.name}`}>
 				<div class={style.topic}>
 					<h4 style={{ textAlign: 'start' }}>{thing.name}</h4>
 				</div>
 			</Link>
 		)
-	});
+
+		return (
+			<form action="/things">
+				<datalist id="things" style={{ display: 'inherit' }}>
+					{options}
+				</datalist>
+			</form >
+		)
+	}
+
+	const renderThingList = () => {
+		return things.map((thing) => {
+			const slug = thing.name.toLowerCase().replace(/ /g, '-');
+			return (
+				<Link activeClass={style.activeTopic} href={`/things/${slug}`}>
+					<div class={style.topic}>
+						<h4 style={{ textAlign: 'left' }}>{thing.name}</h4>
+					</div>
+				</Link>
+			)
+		});
+	};
 
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+		<div style={{
+			display: 'flex',
+			flexDirection: 'column',
+			height: '100vh'
+		}}>
 			<Header />
 			<main class={style.main}>
 				<div style={{ gridArea: 'topics' }}>
-					{thingList}
+					{renderThingList()}
 				</div>
 				<Match path="/things">
-					{({ matches }) => {
+					{(args) => {
+						const { matches, path } = args;
+						const paths = path.split(/\/|\?/g);
+						const slug = paths[paths.length - 1];
+						console.log(slug)
+						const thing = things.find((thing) => thing.name === slug)
+
 						return matches ?
-							<h3 style={{ gridArea: 'main' }}>
+							<h3 style={{ gridArea: 'main', textAlign: 'left' }}>
 								Welcome to my personal knowlege base
 							</h3> :
 							<div style={{ gridArea: 'main' }}>

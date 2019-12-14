@@ -4,6 +4,9 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
   */
 .main {
     flex: 1;
+    margin: 0 auto;
+	padding: 4vh 2vw; 
+    max-width: 860px;
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 4vh 1fr 4vh;
@@ -16,12 +19,21 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
       'topics main'
       'topics footer'; 
     grid-gap: 4px; 
-	padding: 4vh 2vw; 
 }
 
 .note { 
     display: none;
     pointer-events: none;
+}
+
+.search {
+    content: attr(value);  
+    margin-top: 8px;
+    margin-bottom: 8px
+}
+  
+.search::after{
+    content: attr(); 
 }
 
 .note.active {
@@ -31,16 +43,18 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
 }
 
 .content {
-	position: absolute;
+    flex: 1; 
     padding: 8px;
 }
 
-.topic {
+.topic { 
+    flex:1;
     justify-content: 'center';
-    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
-.topic::after { 
+.topic h4::after {  
 	content: "";
 	position: absolute;
 	width: 80%;
@@ -60,7 +74,9 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
 	transform: scaleX(0);
 }
  
-.activeTopic { 
+.topic h4:hover::after,
+.topic h4:active::after,
+.activeTopic div h4:active {  
     -webkit-transform-origin: bottom left;
     transform-origin: bottom left;
     -webkit-transform: scaleX(1);
