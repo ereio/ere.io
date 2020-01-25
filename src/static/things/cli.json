@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "cli",
+  "notes": "## Unix Shell Stuff\n\n```\ntar -xzvf (gz compressed)\ntar -xjvf (bz2 compressed)\n```"
+}
