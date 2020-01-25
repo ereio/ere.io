@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "cli",
-  "notes": "## Unix Shell Stuff\n\n```\ntar -xzvf (gz compressed)\ntar -xjvf (bz2 compressed)\n```"
+  "notes": "## Unix Shell Stuff\n\n```\ntar -xzvf (gz compressed)\ntar -xjvf (bz2 compressed)\n```\n\nWhen filesystem is mounted under SMB, even root will have trouble settings correct permissions through the sudo command. **You can get around this problem by specifying ```--no-same-owner```**\n\n```\ntar xzvf stuff.tar.gz --no-same-owner -C /media/dest\n```"
 }
