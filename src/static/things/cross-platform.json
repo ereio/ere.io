@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "cross-platform",
-  "notes": "# Cross Platform Development\n\n### Haskell\n - Inspired by [Luite Stegemann](http://weblog.luite.com/wordpress/?p=127)\n - [Reflex](https://reflex-frp.org/tutorial) as a framework\n - [Obelisk](https://github.com/obsidiansystems/obelisk/#installing-obelisk) framework and development tool for multi-platform Haskell applications\n - [nix](https://nixos.org/nix/) for package management\n   - package for alpine exist "
+  "notes": "# Cross Platform Development\n\n### Haskell\n - Inspired by [Luite Stegemann](http://weblog.luite.com/wordpress/?p=127)\n - [Reflex](https://reflex-frp.org/tutorial) as a framework\n - [Obelisk](https://github.com/obsidiansystems/obelisk/#installing-obelisk) framework and development tool for multi-platform Haskell applications\n - [nix](https://nixos.org/nix/) for package management\n   - package for alpine exist \n```\n<LinearGradient\n          style={[styles.card, {\n            flexDirection: 'column',\n            justifyContent: 'space-between',\n            backgroundColor: colorStart,\n          }]}\n          colors={[colorStart, colorStart, colorMiddle, colorMiddle, colorEnd, colorEnd]}\n          locations={[0, 0.45, 0.45, 0.75, 0.75, 1]}\n          start={{ x: 0.00, y: 0.25 }}\n          end={{ x: 0.035, y: 1 }}>\n\n</LinearGradient>\n```"
 }
