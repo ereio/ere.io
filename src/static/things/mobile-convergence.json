@@ -1,5 +1,5 @@
 {
   "layout": "blog",
-  "name": "mobile-convergence",
+  "name": "convergence",
   "notes": "# Postmarket OS\n\n#### Setup on Nexus 6P\n\n- [Postmarket OS installation guide](https://wiki.postmarketos.org/wiki/Installation_guide)\n\n- [pmbootstrap installation guide](https://wiki.postmarketos.org/wiki/Installing_pmbootstrap)\n\n- [Nexus 6P Device Guide Link](https://wiki.postmarketos.org/wiki/Google_Nexus_6P_(huawei-angler))\n\n- [Angler: Support Wi-Fi and graphics ticket](https://github.com/postmarketOS/pmbootstrap/pull/555)\n\n### Working Window Managers (02/2020)\n  - \n### Quirks\n  - when using "
 }
