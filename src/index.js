@@ -32,7 +32,6 @@ class App extends Component {
                     <Home path="/me" />
                     <Things path="/things" />
                     <Things path="/things/:thing" />
-                    <Things path="/things/:thing?" />
                     <Blog path="/blog" />
                     <Post path="/blog/:post" />
                 </Router>

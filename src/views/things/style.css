@@ -1,8 +1,9 @@
  /*
-https://stackoverflow.com/questions/49025403/max-width-with-css-grid
- https://alligator.io/css/css-grid-layout-fr-unit/
+  * https://stackoverflow.com/questions/49025403/max-width-with-css-grid
+  * https://alligator.io/css/css-grid-layout-fr-unit/
   */
-.main {
+
+/* .main {
     flex: 1;
     margin: 0 auto;
 	padding: 4vh 2vw; 
@@ -19,12 +20,62 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
       'topics main'
       'topics footer'; 
     grid-gap: 4px; 
+} */
+
+.main {
+    flex: 1;
+    margin: 0 auto;
+	padding: 4vh 2vw; 
+    max-width: 800px;
+    display: grid;
+    grid-gap: 4px; 
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 4vh 1fr 4vh;
+    grid-template-areas:
+      'nothing main'
+      'topics main' 
+      'topics footer'; 
 }
 
 .note { 
     display: none;
     pointer-events: none;
 }
+
+.toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    width: 40px; 
+    height: 40px;
+    /* border-radius: 40px; */
+    background-color: #FEFEFE; 
+    border: 1.5px solid #000; 
+} 
+
+.toggleInput {
+    display: block;
+    cursor: pointer; 
+    width: 40px;
+    height: 40px;  
+    opacity: 0; 
+} 
+ 
+
+.toggleInput:checked ~ .toggle {  
+    grid-area: main;
+    transition: all .5s ease,-webkit-transform .5s ease;   
+    transform: rotate(-180deg); 
+    width: 0px; 
+}  
+ 
+.toggleInput:checked ~ .topics {    
+    transition: 
+        width .5s ease, -webkit-transform width .5s ease,
+        opacity 1.5s ease, -webkit-transform width .5s ease;  
+    width: 0px;
+    opacity: 0;
+}  
 
 .search {
     content: attr(value);  
@@ -47,6 +98,9 @@ https://stackoverflow.com/questions/49025403/max-width-with-css-grid
     padding: 8px;
 }
 
+.topics {
+    grid-area: topics;
+}
 
 .topic { 
     flex:1; 

@@ -47,6 +47,7 @@ const Things = () => {
 	  }
 	  */
 
+
 	const renderThingList = () => {
 		return things.map((thing) => {
 			const slug = thing.name.toLowerCase().replace(/ /g, '-');
@@ -60,6 +61,23 @@ const Things = () => {
 		});
 	};
 
+	const renderThing = (args) => {
+		const { matches, path } = args;
+		const paths = path.split(/\/|\?/g);
+		const slug = paths[paths.length - 1];
+		const thing = things.find((thing) => thing.name === slug)
+
+		return matches ?
+			(<h3 style={{ gridArea: 'main', textAlign: 'left' }}>
+				{'Welcome to my personal knowlege base'}
+			</h3>) :
+			(<div style={{ gridArea: 'main' }}>
+				<div class={style.content}>
+					<span dangerouslySetInnerHTML={{ __html: Marked(thing.notes) }} />
+				</div>
+			</div>)
+	}
+
 	return (
 		<div style={{
 			display: 'flex',
@@ -68,26 +86,13 @@ const Things = () => {
 		}}>
 			<Header />
 			<main class={style.main}>
-				<div style={{ gridArea: 'topics' }}>
+				<input id="collapse-toggle" class={style.toggleInput} type="checkbox" />
+				<label for="collapse-toggle" class={style.toggle} />
+				<div class={style.topics}>
 					{renderThingList()}
 				</div>
 				<Match path="/things">
-					{(args) => {
-						const { matches, path } = args;
-						const paths = path.split(/\/|\?/g);
-						const slug = paths[paths.length - 1];
-						const thing = things.find((thing) => thing.name === slug)
-
-						return matches ?
-							<h3 style={{ gridArea: 'main', textAlign: 'left' }}>
-								Welcome to my personal knowlege base
-							</h3> :
-							<div style={{ gridArea: 'main' }}>
-								<div class={style.content}>
-									<span dangerouslySetInnerHTML={{ __html: Marked(thing.notes) }} />
-								</div>
-							</div>
-					}}
+					{renderThing}
 				</Match>
 			</main>
 		</div>

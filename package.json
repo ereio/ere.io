@@ -17,6 +17,7 @@
     "generate": "node ./scripts/generate-statics.js",
     "generate:dist": "./scripts/bundle-dist.sh",
     "deploy:prod": "yarn generate:dist && netlify deploy --prod --dir=./dist/",
+    "deploy:prod:full": "yarn build && yarn generate:dist && netlify deploy --prod --dir=./dist/",
     "dev": "preact watch",
     "lint": "eslint src",
     "test": "jest",

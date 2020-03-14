@@ -83,8 +83,9 @@
 	opacity: 1; 
     transition: opacity 1s ease-out;
     -moz-transition: opacity  1s ease-out;
-    -webkit-transition: opacity 1s ease-out;
+	-webkit-transition: opacity 1s ease-out;
 } 
+
 
 .stem_hover { 
 	position: absolute;  
@@ -158,8 +159,8 @@
 	bottom: 0;
 	left: 37px;
 
-	background-color: #000000;
 	opacity: 1;  
+	background-color: #000000;
     transition: opacity 1s ease-out;
     -moz-transition: opacity  1s ease-out;
     -webkit-transition: opacity 1s ease-out;
@@ -254,11 +255,40 @@
 }
 
 .dot:hover {
-	opacity: 0;   
+	opacity: 0.5;   
     transition: opacity  0.25s ease-in;
     -moz-transition: opacity   0.25s ease-in;
-    -webkit-transition: opacity 0.25s ease-in;
+	-webkit-transition: opacity 0.25s ease-in;
 }
+
+.dot:not(:hover) { 
+	animation: flicker 15s ease-in-out infinite;   
+}
+
+.dot:active { 
+	opacity: 1;
+	animation: avoid 10s ease-in infinite;   
+}
+
+@keyframes flicker {
+    0%, 14.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99; 
+		transition: ease-in-out;
+		transition: opacity 1s ease-out;
+    }
+    15%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.6; 
+		transition: ease-in-out;
+		transition: opacity 1s ease-in;
+    }
+}
+
+@keyframes avoid {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+ 
 
 
 /* .dot:hover ~ .spout, .dot:hover ~ .bottom, .dot:hover ~ .topleft {
