@@ -29,8 +29,8 @@
     max-width: 800px;
     display: grid;
     grid-gap: 4px; 
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 4vh 1fr 4vh;
+    grid-template-columns: 0fr 6fr;
+    grid-template-rows: 4vh 1fr 4vh; 
     grid-template-areas:
       'nothing main'
       'topics main' 
@@ -59,8 +59,7 @@
     width: 40px;
     height: 40px;  
     opacity: 0; 
-} 
- 
+}  
 
 .toggleInput:checked ~ .toggle {  
     grid-area: main;
@@ -75,7 +74,7 @@
         opacity 1.5s ease, -webkit-transform width .5s ease;  
     width: 0px;
     opacity: 0;
-}  
+}
 
 .search {
     content: attr(value);  
@@ -93,8 +92,7 @@
     pointer-events: visible;
 }
 
-.content {
-    flex: 1; 
+.content { 
     padding: 8px;
 }
 
