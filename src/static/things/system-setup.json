@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "system-setup",
-  "notes": "# System Setups\n\n### RPi Zero\n\n#### Setup SSH from USB\n1) place line in ```/config.txt```\n```\ndtoverlay=dwc2\n```\n\n2) place line after ```rootwait``` in ```/cmdline.txt```\n```\nmodules-load=dwc2,g_ether\n```\n\n3) enabled ssh by adding .ssh in the ```/boot``` directory"
+  "notes": "# System Setups\n\n### RPi Zero\n\n#### Setup SSH from USB\n1) place line in ```/config.txt``` at the very bottom\n```\ndtoverlay=dwc2\n```\n\n2) place line after ```rootwait``` in ```/cmdline.txt```\n      * space deliminated as kernel params\n```\nmodules-load=dwc2,g_ether\n```\n\n3) enabled ssh by adding .ssh in the ```/boot``` directory\n\n4) ```ssh pi@raspberrypi.local``` should now work\n\n\n\n"
 }
