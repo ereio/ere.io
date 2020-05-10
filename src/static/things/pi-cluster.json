@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "pi-cluster",
-  "notes": "# Raspberry Pi Cluster\n\n[Cluster Tutorial](https://www.nighttype.com/projects/raspberry-pi-cluster/#install-dhcp-server-software-for-master-node)"
+  "notes": "# Raspberry Pi Cluster\n\n[Cluster Tutorial](https://www.nighttype.com/projects/raspberry-pi-cluster/#install-dhcp-server-software-for-master-node)\n\nHardware Setup\n- Rpi v1 x1\n- Rpi v3 x2\n\n### Installing DHCP server software for master node\n"
 }
