@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "react",
+  "notes": "# React\n\n### Updates since I've heavily used it\n\n- react-router-redux has been deprecated and people use connected-react-router now to handle history in redux"
+}
