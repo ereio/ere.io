@@ -11,7 +11,7 @@ const Headline = ({ post }) => {
     const { title, date, body } = post;
     const slug = title.toLowerCase().replace(/ /g, '-');
     return (
-        <Link activeClassName={style.activeLink} href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`}>
             <a>
                 <div style={{ flex: 1, marginBottom: '8vh' }}>
                     <h2 style={{ marginBottom: 8 }}>{title}</h2>

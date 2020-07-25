@@ -12,13 +12,6 @@ import styles from './styles.css';
 // Static Data
 import thingsJson from '../../../public/all-things.json';
 
-/**
- * Personal Knowledge Base
- * 
- * https://alligator.io/css/css-grid-layout-fr-unit/
- * https://nextjs.org/docs/basic-features/data-fetching
- */
-
 const renderThingList = ({ things, selected }) => {
 	return things.map((thing) => {
 		const slug = thing.name.toLowerCase().replace(/ /g, '-');
