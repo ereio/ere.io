@@ -10,12 +10,18 @@ import style from './styles.css';
 const Header = () => (
 	<header class={style.header}>
 		<nav class={style.nav}>
-			<Link activeClassName={style.activeLink} href="/">me</Link>
-			<Link activeClassName={style.activeLink} href="/things">things</Link>
+			<Link activeClassName={style.activeLink} href="/">
+				<a>me</a>
+			</Link>
+			<Link activeClassName={style.activeLink} href="/things">
+				<a>things</a>
+			</Link>
 			<Link href="/me" class={style.icon}>
 				<img src={assets.ereioIcon} style={{ height: 45, width: 45, marginLeft: 8, textAlign: 'center' }} />
 			</Link>
-			<Link activeClassName={style.activeLink} href="/blog">blog</Link>
+			<Link activeClassName={style.activeLink} href="/blog">
+				<a>blog</a>
+			</Link>
 			<a href="https://github.com/ereio" native>github</a>
 		</nav>
 	</header>

@@ -1,4 +1,14 @@
-# syphon.org
+# ere.io
 
-## why
-Though the website is written using Next/JS, it is converted to static HTMl/CSS before deployment. I've manually blocked the export of JS that is used for rendering in react. Thus, no JS is actually used in the deployed version of [syphon.org](https://syphon.org)
+## my website
+
+#### things that are under the domain:
+- the website
+- blog (ere.io/blog)
+- PKB (ere.io/things)
+- my email (@ere.io)
+
+#### iterations:
+- [x] ~~preact + react+snap (static exports)~~
+- [ ] next (static export)
+- [ ] pure web components (static export)
