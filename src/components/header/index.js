@@ -17,12 +17,14 @@ const Header = () => (
 				<a>things</a>
 			</Link>
 			<Link href="/me" class={style.icon}>
-				<img src={assets.ereioIcon} style={{ height: 45, width: 45, marginLeft: 8, textAlign: 'center' }} />
+				<a>
+					<img src={assets.ereioIcon} style={{ height: 45, width: 45, marginLeft: 8, textAlign: 'center' }} />
+				</a>
 			</Link>
 			<Link activeClassName={style.activeLink} href="/blog">
 				<a>blog</a>
 			</Link>
-			<a href="https://github.com/ereio" native>github</a>
+			<a href="https://github.com/ereio" native="true">github</a>
 		</nav>
 	</header>
 );

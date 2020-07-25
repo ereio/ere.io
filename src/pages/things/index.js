@@ -43,23 +43,23 @@ const renderSearch = () => {
  * https://alligator.io/css/css-grid-layout-fr-unit/
  * https://nextjs.org/docs/basic-features/data-fetching
  */
+
+const renderThingList = ({ things }) => {
+	return things.map((thing) => {
+		const slug = thing.name.toLowerCase().replace(/ /g, '-');
+		return (
+			<Link key={thing.name} href={`/things/${slug}`}>
+				<a>
+					<h4 class={styles.topic}>
+						{thing.name}
+					</h4>
+				</a>
+			</Link>
+		)
+	});
+};
+
 const Things = ({ things }) => {
-
-	const renderThingList = () => {
-		return things.map((thing) => {
-			const slug = thing.name.toLowerCase().replace(/ /g, '-');
-			return (
-				<Link key={thing.name} href={`/things/${slug}`}>
-					<a>
-						<h4 class={styles.topic}>
-							{thing.name}
-						</h4>
-					</a>
-				</Link>
-			)
-		});
-	};
-
 	return (
 		<div className="app">
 			<Header />
@@ -67,7 +67,7 @@ const Things = ({ things }) => {
 				<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
 				<label for="collapse-toggle" class={styles.toggle} />
 				<div class={styles.topics}>
-					{renderThingList()}
+					{renderThingList({ things })}
 				</div>
 				<h3 style={{ gridArea: 'main', textAlign: 'left' }}>
 					{'Welcome to my personal knowlege base'}

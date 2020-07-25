@@ -13,6 +13,9 @@
             ], // resolve any `~/foo/bar` to `<baseUrl>/foo/bar`
             "global/*": [
                 "./components"
+            ], // resolve any `~/foo/bar` to `<baseUrl>/foo/bar`
+            "public/*": [
+                "../public"
             ] // resolve any `~/foo/bar` to `<baseUrl>/foo/bar`
         }
     }

@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "yarn generate && next build && next export",
+    "start": "next start",
+    "generate": "node ./scripts/generate-statics.js"
   },
   "devDependencies": {
     "eslint": "^7.3.0",
