@@ -43,7 +43,6 @@ const renderSearch = () => {
  * https://alligator.io/css/css-grid-layout-fr-unit/
  * https://nextjs.org/docs/basic-features/data-fetching
  */
-
 const Things = ({ things }) => {
 
 	const renderThingList = () => {
@@ -65,6 +64,8 @@ const Things = ({ things }) => {
 		<div className="app">
 			<Header />
 			<main className={styles.main}>
+				<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
+				<label for="collapse-toggle" class={styles.toggle} />
 				<div class={styles.topics}>
 					{renderThingList()}
 				</div>

@@ -55,6 +55,8 @@ const Things = ({ things }) => {
 		<div className="app">
 			<Header />
 			<main className={styles.main}>
+				<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
+				<label for="collapse-toggle" class={styles.toggle} />
 				<div class={styles.topics}>
 					{renderThingList({ things, selected: thing })}
 				</div>
