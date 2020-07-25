@@ -10,5 +10,5 @@
 
 #### iterations:
 - [x] ~~preact + react+snap (static exports)~~
-- [ ] next (static export)
+- [x] next (static export) + netlify CMS
 - [ ] pure web components (static export)
