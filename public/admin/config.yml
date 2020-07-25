@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: ereio/ere.io
-  squash_merges: true
   branch: main
+  squash_merges: true
 publish_mode: editorial_workflow
 media_folder: "public/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "uploads"
