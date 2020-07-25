@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "open-hardware",
-  "notes": "## Open Hardware\n\n#### \\- Laptop\n\n#### \\- Lapdock + Portable SoC Board\n\n* [Nexdock 2]()\n* ROC-RK3328-CC (Renegade)\n  * 4gb DDR4\n  * 4 ARM Cortex-A53 @ 1.4GHz\n  * [ARM Mali-450 MP4](https://www.notebookcheck.net/ARM-Mali-450-MP4.116281.0.html)"
+  "notes": "## Open Hardware\n\n### \\- Custom Laptop\n\n* Print your own [pi-top \\[3]](https://www.adafruit.com/product/3762?gclid=EAIaIQobChMI6qyR87ms5gIVkpOzCh3JXgeMEAYYASABEgKdhvD_BwE)\n\n### \\- Lapdock + Portable SoC Board\n\n* Mirobook\n* [Nexdock 2](<>) \n* ROC-RK3328-CC (Renegade)\n\n  * 4gb DDR4\n  * 4 ARM Cortex-A53 @ 1.4GHz\n  * [ARM Mali-450 MP4](https://www.notebookcheck.net/ARM-Mali-450-MP4.116281.0.html)\n\n### \\- Environment Monitor\n* https://www.youtube.com/watch?v=oqV2xU1fee8\n* "
 }

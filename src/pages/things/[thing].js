@@ -18,6 +18,7 @@ import thingsJson from '../../../public/all-things.json';
  * https://alligator.io/css/css-grid-layout-fr-unit/
  * https://nextjs.org/docs/basic-features/data-fetching
  */
+
 const renderThingList = ({ things, selected }) => {
 	return things.map((thing) => {
 		const slug = thing.name.toLowerCase().replace(/ /g, '-');
@@ -68,8 +69,9 @@ const Things = ({ things }) => {
 	)
 }
 
+const things = thingsJson.map((json) => JSON.parse(json));
+
 export async function getStaticProps() {
-	const things = thingsJson.map((json) => JSON.parse(json));
 	return {
 		props: {
 			things,
@@ -78,8 +80,6 @@ export async function getStaticProps() {
 }
 
 export async function getStaticPaths() {
-	const things = thingsJson.map((json) => JSON.parse(json));
-
 	const paths = things.map((thing) => ({
 		params: { thing: thing.name },
 	}))

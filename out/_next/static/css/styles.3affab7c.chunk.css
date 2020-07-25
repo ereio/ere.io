@@ -630,30 +630,11 @@ h4, h5, h6 {
   * https://alligator.io/css/css-grid-layout-fr-unit/
   */
 
-/* .main {
-    flex: 1;
-    margin: 0 auto;
-	padding: 4vh 2vw; 
-    max-width: 860px;
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 4vh 1fr 4vh;
-    grid-template-areas:
-      'nothing main'
-      'topics main'
-      'topics main'
-      'topics main'
-      'topics main'
-      'topics main'
-      'topics footer'; 
-    grid-gap: 4px; 
-} */
-
 ._2FvGZFPK1RBmx2MvEu573p {
     flex: 1;
     margin: 0 auto;
 	padding: 4vh 2vw; 
-    max-width: 800px;
+    max-width: 100vw;
     display: grid;
     grid-gap: 4px; 
     grid-template-columns: 0fr 6fr;
