@@ -1,13 +1,15 @@
 backend:
   name: github
   repo: ereio/ere.io
+  branch: main
+  squash_merges: true
 publish_mode: editorial_workflow
 media_folder: "public/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/uploads"
+public_folder: "uploads"
 collections:
   - name: "topic" 
     label: "Topic"  
-    folder: "things" 
+    folder: "public/things" 
     create: true  
     identifier_field: name
     slug: "{{slug}}" 
@@ -20,7 +22,7 @@ collections:
       - {label: "Notes", name: "notes", widget: "markdown"}
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
-    folder: "posts" 
+    folder: "public/posts"
     create: true  
     slug: "{{slug}}" 
     extension: json
