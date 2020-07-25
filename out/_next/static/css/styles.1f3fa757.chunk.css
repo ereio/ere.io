@@ -383,7 +383,7 @@ li > a {
 } 
 
 ._3uDoyi5NGSb4HEAw-XYlj6:after {
-	background-image: url(/graphics/background_peter_tarka.png); 
+	background-image: url(/images/background_peter_tarka.png); 
 	filter: blur(0.25px); 
 	background-position:50%;
 	background-repeat:no-repeat;
@@ -598,6 +598,31 @@ pre[class*="language-"] {
 .jo_UzXCjI8n0x20c7tnaT nav a._19HciptuWl4umsGrLzsMEN {
 	background-color: rgba(255,255,255,0.65); 
 	color: #000000; 
+}
+
+._1E7MA79brgxqwa8d9x-Nw6 {
+	margin: 0 auto;
+	padding: 4vh 5vw; 
+	max-width: 860px;
+}
+
+h1, h2,h3, h4, h5, h6 { 
+    padding: 0;
+    margin: 0;
+}
+
+h2,h3 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
+
+h4, h5, h6 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
 }
 
  /*
