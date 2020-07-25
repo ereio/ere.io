@@ -1,0 +1,5 @@
+{
+  "layout": "blog",
+  "name": "media-server",
+  "notes": "# Media Server Stack\n\n### Plex\n> stub\n\n### Radarr\n> stub\n\n### Sonarr\n\n* https://forums.sonarr.tv/t/raspberry-pi-4-installation-error/23424\n* after installing mono\n* [Adding indexers via Jackett](https://old.reddit.com/r/sonarr/comments/50yg2f/tutorial_how_to_add_the_pirate_bay_as_an_indexer/)\n\n\n\n#### Raspberry Pi Install\n\n```\nsudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0xA236C58F409091A18ACA53CBEBFF6B99D9B78493\necho “deb http://apt.sonarr.tv/ master main” | sudo tee /etc/apt/sources.list.d/sonarr.list\nsudo apt update\nsudo apt-get -y install nzbdrone\n```"
+}
