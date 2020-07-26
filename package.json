@@ -1,6 +1,6 @@
 {
-  "name": "syphon.org",
-  "version": "0.0.1",
+  "name": "ere.io",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,14 +16,13 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "next-images": "^1.4.0",
+    "next-html": "^0.1.1",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "marked": "^1.1.1",
     "next": "^9.4.4",
-    "next-html": "^0.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

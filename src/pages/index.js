@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Hero from 'components/hero';
 
 // Styles
-import styles from './index.css';
+import styles from './styles.module.css';
 
 function Main() {
     return (
@@ -21,6 +21,5 @@ function Main() {
         </div>
     )
 }
-
 
 export default Main

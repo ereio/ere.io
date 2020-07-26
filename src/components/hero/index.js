@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import styles from './styles.css';
+import styles from './styles.module.css';
 
 // https://stackoverflow.com/questions/54519654/how-do-i-add-color-to-my-svg-image-in-react/54521330
 // https://github.com/pmcalmeida/preact-cli-svg-loader

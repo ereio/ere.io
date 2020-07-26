@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Header from 'components/header';
 
 // Styling
-import styles from './styles.css';
+import styles from './styles.module.css';
 
 // Static Data
 import thingsJson from '../../../public/all-things.json';
@@ -36,15 +36,19 @@ const Things = ({ things }) => {
 	return (
 		<div className="app">
 			<Header />
-			<main className={styles.main}>
-				<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
-				<label for="collapse-toggle" class={styles.toggle} />
-				<div class={styles.topics}>
-					{renderThingList({ things })}
-				</div>
-				<h3 style={{ gridArea: 'main', textAlign: 'left' }}>
-					{'Welcome to my personal knowlege base'}
-				</h3>
+			<main class="pt-16 container px-3 mx-auto flex flex-row">
+				<section class="mx-auto flex flex-col items-start">
+					<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
+					<label for="collapse-toggle" class={styles.toggle} />
+					<div class={styles.topics}>
+						{renderThingList({ things })}
+					</div>
+				</section>
+				<section class="mx-auto flex-grow flex-wrap flex-col items-start">
+					<h1>
+						{'Welcome to my personal knowlege base'}
+					</h1>
+				</section>
 			</main>
 		</div>
 	)

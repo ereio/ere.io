@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import assets from 'global/assets';
-import style from './styles.css';
+import style from './styles.module.css';
 
 const Header = () => (
 	<header class={style.header}>

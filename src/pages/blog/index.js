@@ -5,7 +5,7 @@ import Header from 'components/header';
 
 import postsJson from '../../../public/all-posts.json';
 
-import style from './style.css';
+import style from './styles.module.css';
 
 const Headline = ({ post }) => {
     const { title, date, body } = post;
@@ -28,11 +28,12 @@ const Blog = ({ posts }) => {
         <Headline post={post} />
     ));
     return (
-        <div style={{ flex: 1 }}>
+        <div className="app">
             <Header />
-            <main class={style.main}>
-                <h1 style={{ marginBottom: '4vh' }}></h1>
-                {headlines}
+            <main class="container mx-auto flex flex-col pt-16">
+                <section class="px-8 flex flex-col items-center">
+                    {headlines}
+                </section>
             </main>
         </div>
     )
