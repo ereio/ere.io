@@ -46,7 +46,7 @@ const Things = ({ things }) => {
 				</section>
 				<section class="mx-auto flex-grow flex-wrap flex-col items-start">
 					<h1>
-						{'Welcome to my personal knowlege base'}
+						{'Welcome to my personal knowledge base'}
 					</h1>
 				</section>
 			</main>
