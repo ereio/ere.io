@@ -16,7 +16,7 @@ class MyDocument extends Document {
                     <meta name="mobile-web-app-capable" content="yes" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                 </Head>
-                <body class="leading-normal tracking-normal text-white gradient">
+                <body class="leading-normal tracking-normal text-black gradient">
                     <Main style={{ height: '100vh' }} />
                     <NextScript />
                 </body>

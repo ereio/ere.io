@@ -18,4 +18,5 @@
 * https://alligator.io/css/css-grid-layout-fr-unit/
 * https://nextjs.org/docs/basic-features/data-fetching
 * https://stackoverflow.com/questions/49025403/max-width-with-css-grid
+* 
 

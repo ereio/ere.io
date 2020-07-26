@@ -5,21 +5,24 @@ import { useRouter } from 'next/router'
 
 import postsJson from '../../../public/all-posts.json';
 
-import style from './style.css';
+import style from './styles.module.css';
 
 const Post = ({ posts }) => {
-
     const router = useRouter()
     const { post: slug } = router.query;
     const postSelected = posts.find((post) => post.title.toLowerCase().replace(/ /g, '-') === slug)
 
     const { title, body } = postSelected;
     return (
-        <div style={{ flex: 1, zIndex: 5 }}>
+        <div className="app">
             <Header />
-            <main class={style.main}>
-                <h1>{title}</h1>
-                <span dangerouslySetInnerHTML={{ __html: Marked(body) }} />
+            <main class="container mx-auto flex flex-col pt-16">
+                <section class="flex flex-col items-center">
+                    <div class="flex flex-col mx-auto items-start max-w-4xl">
+                        <h1>{title}</h1>
+                        <span dangerouslySetInnerHTML={{ __html: Marked(body) }} />
+                    </div>
+                </section>
             </main>
         </div>
     )

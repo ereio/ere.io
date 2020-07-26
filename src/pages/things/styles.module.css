@@ -1,18 +1,16 @@
- 
-.main {
-    flex: 1;
-    margin: 0 auto;
-	padding: 4vh 2vw;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+.app {
+	max-width: 860px;
+} 
 
-.note { 
-    display: none;
-    pointer-events: none;
+/* .search {
+    content: attr(value);  
+    margin-top: 8px;
+    margin-bottom: 8px
 }
+  
+.search::after{
+    content: attr(); 
+} */
 
 .toggle {
     display: block;
@@ -32,8 +30,7 @@
     opacity: 0; 
 }  
 
-.toggleInput:checked ~ .toggle {  
-    grid-area: main;
+.toggleInput:checked ~ .toggle {
     transition: all .5s ease,-webkit-transform .5s ease;   
     transform: rotate(-180deg); 
     width: 0px; 
@@ -47,28 +44,8 @@
     opacity: 0;
 }
 
-.search {
-    content: attr(value);  
-    margin-top: 8px;
-    margin-bottom: 8px
-}
-  
-.search::after{
-    content: attr(); 
-}
-
-.note.active {
-    opacity: 1;  
-    display: flex;  
-    pointer-events: visible;
-}
-
-.content { 
-    padding: 8px;
-}
-
 .topics {
-    grid-area: topics;
+    padding-right: 32px;
 }
 
 .topic { 
@@ -120,25 +97,4 @@
     transform-origin: bottom left;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); 
-}
-
-
-
-h1, h2,h3, h4, h5, h6 { 
-    padding: 0;
-    margin: 0;
-}
-
-h2,h3 { 
-    color: inherit;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-    line-height: 1.1;
-}
-
-h4, h5, h6 { 
-    color: inherit;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-    line-height: 1.1;
-}
+} 

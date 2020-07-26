@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import Header from 'components/header';
 
 // Styling
-import styles from './styles.css';
+import styles from './styles.module.css';
 
 // Static Data
 import thingsJson from '../../../public/all-things.json';
@@ -18,7 +18,7 @@ const renderThingList = ({ things, selected }) => {
 		const thingSelected = thing.name === selected;
 
 		return (
-			<Link href={`/things/${slug}`}>
+			<Link key={slug} href={`/things/${slug}`}>
 				<a className={thingSelected ? styles.current : undefined}>
 					<h4 class={styles.topic}>
 						{thing.name}
@@ -33,11 +33,7 @@ const renderThing = ({ things, selected }) => {
 	const thingSelected = things.find((thing) => thing.name === selected)
 
 	return (
-		<div style={{ gridArea: 'main' }}>
-			<div class={styles.content}>
-				<span dangerouslySetInnerHTML={{ __html: Marked(thingSelected.notes) }} />
-			</div>
-		</div>
+		<div class="max-w-md" dangerouslySetInnerHTML={{ __html: Marked(thingSelected.notes) }} />
 	)
 }
 
@@ -48,15 +44,17 @@ const Things = ({ things }) => {
 	return (
 		<div className="app">
 			<Header />
-			<main className={styles.main}>
-				<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
-				<label for="collapse-toggle" class={styles.toggle} />
-				<div class={styles.topics}>
-					{renderThingList({ things, selected: thing })}
-				</div>
-				<div>
+			<main class="pt-16 container px-3 mx-auto flex flex-row max-w-4xl">
+				<section class="flex flex-col items-start">
+					<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
+					<label for="collapse-toggle" class={styles.toggle} />
+					<div class={styles.topics}>
+						{renderThingList({ things, selected: thing })}
+					</div>
+				</section>
+				<section class="flex-grow flex-wrap flex-col items-start">
 					{renderThing({ things, selected: thing })}
-				</div>
+				</section>
 			</main>
 		</div>
 	)

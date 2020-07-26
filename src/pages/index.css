@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 
 /* Start purging... */
@@ -17,22 +17,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; 
 }
-
-.app { 
-	width: 100vw;
-    height: 100vh;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
+ 
 a {
     font-style: normal;
     color: rgba(0,0,0,1);
@@ -46,50 +31,24 @@ li > a {
 	-webkit-text-decoration-skip: objects;  
 	text-decoration-style: solid;
 	text-decoration-line: underline;
-}
-
-.background {
-	position: fixed;
-	height: 100vh;
-	width: 100vw;
-	left: 0;
-	top: 0;  
-	-webkit-animation: fadein 1.25s; /* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 1.25s; /* Firefox < 16 */
-	 -ms-animation: fadein 1.25s; /* Internet Explorer */
-	  -o-animation: fadein 1.25s; /* Opera < 12.1 */
-		 animation: fadein 1.25s;
-	background-repeat: no-repeat;
-	background-size: cover;
-	z-index: 1; 
 } 
 
-.background:after,
-.background:before {
- content:"";
- display:block;
- height:100%;
- left:0;
- position:absolute;
- top:0;
- width:100%
+
+h1, h2, h3, h4, h5, h6 { 
+    padding: 2;
+    margin: 0;
 }
 
-.background::before { 
-	background-image:linear-gradient(0deg,rgba(19,21,25,.5),rgba(19,21,25,.5));
-	background-position: 50%, 50%;
-	background-repeat:no-repeat,repeat;
-	background-size:auto,256px 256px;
-	transition:background-color 2.5s ease-in-out;
-	transition-delay:.75s;
-	z-index: 2;
-} 
+h2, h3 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
 
-.background:after {
-	background-image: url(/images/background_peter_tarka.png); 
-	filter: blur(0.25px); 
-	background-position:50%;
-	background-repeat:no-repeat;
-	background-size:cover;  
-	z-index: 1;
+h4, h5, h6 { 
+    color: inherit;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
 }
