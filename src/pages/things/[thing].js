@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import Head from 'next/head'
 import Marked from 'marked';
 import { useRouter } from 'next/router'
 
@@ -41,7 +42,7 @@ const Things = ({ things }) => {
 	const router = useRouter()
 	const { thing } = router.query;
 
-	const slug = thing.name.toLowerCase().replace(/ /g, '-');
+	const slug = thing.toLowerCase().replace(/ /g, '-');
 
 	return (
 		<div className="app">

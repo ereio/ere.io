@@ -49,7 +49,7 @@ const Things = ({ things }) => {
 					<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
 					<label for="collapse-toggle" class={styles.toggle} />
 					<div class={styles.topics}>
-						{renderThingList({ things, selected: thing })}
+						{renderThingList({ things, })}
 					</div>
 				</section>
 				<section class="flex-grow flex-wrap flex-col items-start">
