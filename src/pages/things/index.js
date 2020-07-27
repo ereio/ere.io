@@ -1,5 +1,7 @@
 
-import Link from 'next/link';
+import Link from 'next/link'
+import Head from 'next/head'
+
 
 // Components
 import Header from 'components/header';
@@ -35,16 +37,22 @@ const renderThingList = ({ things }) => {
 const Things = ({ things }) => {
 	return (
 		<div className="app">
+			<Head>
+				<title>ereio • things</title>
+				<meta name="description" content="my personal knowledge base" />
+				<meta property="og:title" content="ereio • things" />
+				<meta property="og:image" content="/android-chrome-512x512.png" />
+			</Head>
 			<Header />
-			<main class="pt-16 container px-3 mx-auto flex flex-row">
-				<section class="mx-auto flex flex-col items-start">
+			<main class="pt-16 container px-3 mx-auto flex flex-row max-w-4xl">
+				<section class="flex flex-col items-start">
 					<input id="collapse-toggle" class={styles.toggleInput} type="checkbox" />
 					<label for="collapse-toggle" class={styles.toggle} />
 					<div class={styles.topics}>
-						{renderThingList({ things })}
+						{renderThingList({ things, selected: thing })}
 					</div>
 				</section>
-				<section class="mx-auto flex-grow flex-wrap flex-col items-start">
+				<section class="flex-grow flex-wrap flex-col items-start">
 					<h1>
 						{'Welcome to my personal knowledge base'}
 					</h1>

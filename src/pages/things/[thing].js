@@ -41,8 +41,16 @@ const Things = ({ things }) => {
 	const router = useRouter()
 	const { thing } = router.query;
 
+	const slug = thing.name.toLowerCase().replace(/ /g, '-');
+
 	return (
 		<div className="app">
+			<Head>
+				<title>{`ereio • things • ${slug}`}</title>
+				<meta name="description" content="my personal knowledge base" />
+				<meta property="og:title" content="ereio • things" />
+				<meta property="og:image" content="/android-chrome-512x512.png" />
+			</Head>
 			<Header />
 			<main class="pt-16 container px-3 mx-auto flex flex-row max-w-4xl">
 				<section class="flex flex-col items-start">
