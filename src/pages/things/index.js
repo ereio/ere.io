@@ -24,7 +24,7 @@ const renderThingList = ({ things }) => {
 		const slug = thing.name.toLowerCase().replace(/ /g, '-');
 		return (
 			<Link key={thing.name} href={`/things/${slug}`}>
-				<a>
+				<a class={styles.topicContainer}>
 					<h4 class={styles.topic}>
 						{thing.name}
 					</h4>

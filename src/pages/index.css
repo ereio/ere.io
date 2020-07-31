@@ -18,14 +18,14 @@ html, body {
 	-moz-osx-font-smoothing: grayscale; 
 }
  
-a {
+/* a {
     font-style: normal;
     color: rgba(0,0,0,1);
 	-webkit-text-decoration-skip: objects; 
 	text-decoration: none;
-}
+} */
 
-li > a { 
+a { 
 	font-weight: 500;
     color: rgb(0, 115, 135);
 	-webkit-text-decoration-skip: objects;  

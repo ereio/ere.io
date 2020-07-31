@@ -48,6 +48,13 @@
     padding-right: 32px;
 }
 
+.topicContainer {
+    font-style: normal;
+    color: rgba(0,0,0,1);
+	-webkit-text-decoration-skip: objects; 
+	text-decoration: none;
+}
+
 .topic { 
     flex:1; 
     color: #292929;

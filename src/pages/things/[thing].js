@@ -19,8 +19,8 @@ const renderThingList = ({ things, selected }) => {
 		const thingSelected = thing.name === selected;
 
 		return (
-			<Link key={slug} href={`/things/${slug}`}>
-				<a className={thingSelected ? styles.current : undefined}>
+			<Link key={thing.name} href={`/things/${slug}`}>
+				<a class={styles.topicContainer}>
 					<h4 class={styles.topic}>
 						{thing.name}
 					</h4>
