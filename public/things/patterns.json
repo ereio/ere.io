@@ -1,5 +1,5 @@
 {
   "layout": "blog",
   "name": "patterns",
-  "notes": "# patterns\n\n## make code easy\n\nThere are many patterns you can use in every language that will help make code easy too read and extensible to others from different backgrounds and knowledge bases.\n\n* [Guard Clauses](https://medium.com/better-programming/refactoring-guard-clauses-2ceeaa1a9da)\n"
+  "notes": "# patterns\n\n## make code easy\n\nThere are many patterns you can use in every language that will help make code easy to read and extensible to others from different backgrounds and knowledge bases.\n\n* [Guard Clauses](https://medium.com/better-programming/refactoring-guard-clauses-2ceeaa1a9da)\n"
 }
