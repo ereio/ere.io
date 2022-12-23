@@ -5,19 +5,20 @@
 @tailwind utilities;
 /* Stop purging. */
 
-html, body {  
+html,
+body {
 	width: 100vw;
 	height: 100vh;
 	padding: 0;
 	margin: 0;
 
-	font-family: 'Source Sans Pro',sans-serif; 
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1rem;
-	font-weight: 200; 
+	font-weight: 200;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale; 
+	-moz-osx-font-smoothing: grayscale;
 }
- 
+
 /* a {
     font-style: normal;
     color: rgba(0,0,0,1);
@@ -25,30 +26,38 @@ html, body {
 	text-decoration: none;
 } */
 
-a { 
+a {
 	font-weight: 500;
-    color: rgb(0, 115, 135);
-	-webkit-text-decoration-skip: objects;  
+	color: rgb(0, 115, 135);
+	-webkit-text-decoration-skip: objects;
 	text-decoration-style: solid;
 	text-decoration-line: underline;
-} 
-
-
-h1, h2, h3, h4, h5, h6 { 
-    padding: 2;
-    margin: 0;
 }
 
-h2, h3 { 
-    color: inherit;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-    line-height: 1.1;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 2;
+	margin: 0;
 }
 
-h4, h5, h6 { 
-    color: inherit;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-    line-height: 1.1;
+h2,
+h3 {
+	color: inherit;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
+}
+
+h4,
+h5,
+h6 {
+	color: inherit;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
 }

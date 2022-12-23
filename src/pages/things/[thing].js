@@ -1,20 +1,20 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import Marked from 'marked';
-import { useRouter } from 'next/router';
+import Link from 'next/link'
+import Head from 'next/head'
+import Marked from 'marked'
+import { useRouter } from 'next/router'
 
 // Components
-import Header from 'components/header';
+import Header from 'components/header'
 
 // Styling
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 // Static Data
-import thingsJson from '../../../public/all-things.json';
+import thingsJson from '../../../public/all-things.json'
 
 const renderThingList = ({ things, selected }) => things.map((thing) => {
-  const slug = thing.name.toLowerCase().replace(/ /g, '-');
-  const thingSelected = thing.name === selected;
+  const slug = thing.name.toLowerCase().replace(/ /g, '-')
+  const thingSelected = thing.name === selected
 
   return (
     <Link key={thing.name} href={`/things/${slug}`}>
@@ -24,22 +24,22 @@ const renderThingList = ({ things, selected }) => things.map((thing) => {
         </h4>
       </a>
     </Link>
-  );
-});
+  )
+})
 
 const renderThing = ({ things, selected }) => {
-  const thingSelected = things.find((thing) => thing.name === selected);
+  const thingSelected = things.find((thing) => thing.name === selected)
 
   return (
     <div className="max-w-md" dangerouslySetInnerHTML={{ __html: Marked(thingSelected.notes) }} />
-  );
-};
+  )
+}
 
 const Things = ({ things }) => {
-  const router = useRouter();
-  const { thing } = router.query;
+  const router = useRouter()
+  const { thing } = router.query
 
-  const slug = thing.toLowerCase().replace(/ /g, '-');
+  const slug = thing.toLowerCase().replace(/ /g, '-')
 
   return (
     <div className="app">
@@ -63,28 +63,28 @@ const Things = ({ things }) => {
         </section>
       </main>
     </div>
-  );
-};
+  )
+}
 
-const things = thingsJson.map((json) => JSON.parse(json));
+const things = thingsJson.map((json) => JSON.parse(json))
 
 export async function getStaticProps() {
   return {
     props: {
       things,
     },
-  };
+  }
 }
 
 export async function getStaticPaths() {
   const paths = things.map((thing) => ({
     params: { thing: thing.name },
-  }));
+  }))
 
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
-export default Things;
+export default Things

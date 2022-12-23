@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link'
+import Head from 'next/head'
 
 // Components
-import Header from 'components/header';
+import Header from 'components/header'
 
 // Styling
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 // Static Data
-import thingsJson from '../../../public/all-things.json';
+import thingsJson from '../../../public/all-things.json'
 
 /**
  * Personal Knowledge Base
@@ -18,7 +18,7 @@ import thingsJson from '../../../public/all-things.json';
  * https://stackoverflow.com/questions/49025403/max-width-with-css-grid
  */
 const renderThingList = ({ things }) => things.map((thing) => {
-  const slug = thing.name.toLowerCase().replace(/ /g, '-');
+  const slug = thing.name.toLowerCase().replace(/ /g, '-')
   return (
     <Link key={thing.name} href={`/things/${slug}`}>
       <a className={styles.topicContainer}>
@@ -27,8 +27,8 @@ const renderThingList = ({ things }) => things.map((thing) => {
         </h4>
       </a>
     </Link>
-  );
-});
+  )
+})
 
 const Things = ({ things }) => (
   <div className="app">
@@ -54,14 +54,14 @@ const Things = ({ things }) => (
       </section>
     </main>
   </div>
-);
+)
 
 export async function getStaticProps() {
-  const things = thingsJson.map((json) => JSON.parse(json));
+  const things = thingsJson.map((json) => JSON.parse(json))
   return {
     props: {
       things,
     },
-  };
+  }
 }
-export default Things;
+export default Things
