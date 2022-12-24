@@ -20,9 +20,9 @@
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {
-    "marked": "^2.0.0",
-    "next": "^9.4.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "marked": "^4.2.5",
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
