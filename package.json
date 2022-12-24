@@ -17,7 +17,7 @@
     "next-html": "^0.1.1",
     "next-images": "^1.4.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^3.2.4"
   },
   "dependencies": {
     "marked": "^4.2.5",
